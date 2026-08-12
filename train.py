@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 # 1. 데이터 준비
 # load data 
-data = np.load('uci-datasets/GAS.npy')
+data = np.load('GAS.npy')
 data_tensor = torch.tensor(data, dtype=torch.float32)
 
 # split data, 8:1:1
