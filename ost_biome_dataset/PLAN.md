@@ -68,11 +68,13 @@ TV Tropes는 트랙-바이옴 매핑이 산문 형태라 파싱이 지저분하�
 
 [2] 트랙-구역(Zone) 목록 추출 (자동) + 바이옴 라벨링 (반자동, 유일한 수작업)
      action=parse로 위키텍스트/표를 가져와 트랙명·구역명 파싱.
-     Terraria/Subnautica처럼 구역명이 곧 바이옴이면 라벨링 불필요.
-     WoW/FFXIV/원신처럼 구역명(예: "Dun Morogh")만 있으면
-     게임당 1회, 구역→바이옴 매핑표(zone_map)를 사람이 작성.
-     → 이 매핑표만 사람이 만들면, 그 게임의 수백 곡이 전부 자동 태깅됨
-       (재사용 가능한 1회성 투자, 곡당 수작업이 아니라 "게임당" 수작업)
+     classify_tracks.py가 카테고리별 키워드로 각 행을 스캔해서
+       - 정확히 1개 카테고리만 매칭 -> classified/<category>.csv로 자동 분류
+       - 0개 또는 2개 이상 매칭(애매함) -> classified/_review.csv로 모아둠
+     사람은 _review.csv의 final_category 컬럼만 채우면 되고(카테고리 ID 또는
+     버릴 곡이면 "drop"), --apply-review로 다시 넣으면 해당 카테고리 CSV로 이동.
+     → 사람이 손대는 건 애매한 행뿐이고, 여러 게임을 스크랩해도 카테고리당
+       CSV 하나에 계속 누적됨 (중복은 자동으로 걸러짐)
 
 [3] 실제 오디오 확보 (자동)
      위키 문서에 트랙별 유튜브/공식 링크가 있으면 그대로 사용.
@@ -110,10 +112,16 @@ TV Tropes는 트랙-바이옴 매핑이 산문 형태라 파싱이 지저분하�
 - `games.yaml` — 카테고리별 추천 게임과 위키 도메인 초안 (문서 제목은 하드코딩하지 않고
   런타임에 검색하도록 설계 — 위키 문서 제목은 자주 바뀌므로)
 - `wiki_scraper.py` — MediaWiki API로 문서 검색 + 위키텍스트 파싱, 표에서 트랙/구역 추출
-- `download_tracks.py` — 추출된 트랙 목록을 받아 yt-dlp로 오디오 다운로드 + 메타데이터 CSV 생성
+- `classify_tracks.py` — 스크랩 CSV를 카테고리 키워드로 자동/반자동 분류, classified/<category>.csv로 누적
+- `download_tracks.py` — 분류된 트랙 목록을 받아 (위키 파일 직접 다운로드 우선, 안 되면 yt-dlp로) 오디오 다운로드 + 메타데이터 CSV 생성
 - `requirements.txt`
 
-**한계**: 이 세션의 샌드박스는 fandom.com / wiki.gg 등에 대한 아웃바운드 네트워크가
-차단되어 있어(egress proxy) 실제 실행/검증을 하지 못했다. 코드는 MediaWiki API 스펙
-기준으로 작성했으나, 로컬/네트워크가 열린 환경에서 먼저 `--dry-run`으로 소량 테스트해
-보길 권장한다.
+**한계**: `wiki_scraper.py`/`download_tracks.py`는 Claude 세션 샌드박스의 아웃바운드
+네트워크 제한(fandom.com/wiki.gg 등 egress 차단) 때문에 실제 위키 접속으로는 검증하지
+못했고 MediaWiki API 스펙 기준으로만 작성했다 (로컬 환경에서 직접 실행해 확인 권장).
+`classify_tracks.py`는 실제 Terraria 스크랩 CSV로 검증했다 — 곡 설명(Description) 컬럼에
+다른 작품명이 언급되는 등으로 인한 오탐 사례가 실제로 있었고(예: "Dungeon Defenders" 언급
+때문에 `dungeon` 키워드가 걸려 cave_underground로 잘못 분류됨) 그런 서술형 컬럼은 스캔에서
+제외하도록 고쳤다. 그래도 트리거 조건 자체에 카테고리 키워드가 우연히 들어간 보스전/이벤트
+곡(예: "Frost Legion" 조건 때문에 snow_ice로 분류된 보스곡)은 걸러지지 않으므로, 정확히
+1개만 매칭돼 자동 분류된 결과도 가끔 스팟체크할 것을 권장한다.
