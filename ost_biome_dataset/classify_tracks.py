@@ -13,8 +13,11 @@
        _review.csv에 남는다.
 
 여러 게임을 스크랩해도 classified/<category>.csv 하나에 계속 쌓이며(게임별로 CSV가
-나뉘지 않음), (game, track_title, source_page) 조합으로 중복을 걸러내 같은 스크립트를
-여러 번 돌려도 중복 추가되지 않는다.
+나뉘지 않음), 실제 오디오 파일/링크(_file_links 우선, 없으면 _ext_links, 그것도 없으면
+game+제목) 기준으로 중복을 걸러내 같은 스크립트를 여러 번 돌려도 중복 추가되지 않는다.
+같은 곡이 위키의 서로 다른 문서(예: Terraria의 "Music" 페이지와, 그 곡을 재생하는
+아이템을 설명하는 "Music Boxes" 페이지)에 각각 설명되어 있어도 실제 파일이 같으면
+하나로 취급한다.
 
 주의: 컬럼 구성이 위키마다 다르므로(wiki_scraper.py가 위키 표 헤더를 그대로 씀)
     이 스크립트는 메타데이터 컬럼(game, _wiki_api 등)을 제외한 "모든" 텍스트 컬럼을
@@ -29,6 +32,7 @@
 """
 
 import argparse
+import ast
 import csv
 from pathlib import Path
 
@@ -79,8 +83,35 @@ def classify_row(row: dict) -> list[str]:
     return matched
 
 
+def _parse_list_cell(value) -> list[str]:
+    """CSV에 str(list)로 저장된 값을 복원."""
+    if not value:
+        return []
+    if isinstance(value, list):
+        return value
+    try:
+        parsed = ast.literal_eval(value)
+        if isinstance(parsed, list):
+            return [str(v) for v in parsed]
+    except (ValueError, SyntaxError):
+        pass
+    return [v.strip(" '\"") for v in value.strip("[]").split(",") if v.strip()]
+
+
 def _dedup_key(row: dict) -> tuple:
-    return (row.get("game", ""), _guess_title(row), row.get("_source_page", ""))
+    """같은 실제 오디오를 가리키는 행은 다른 위키 문서(예: Terraria의 "Music" vs
+    "Music Boxes")에서 왔더라도 같은 트랙으로 취급한다. _file_links(위키가 호스팅하는
+    실제 파일명)를 최우선 식별자로 쓰고, 그게 없으면 외부 링크, 그것도 없으면
+    (game, title)로 폴백한다. 페이지 제목(_source_page)은 더 이상 키에 포함하지 않음 —
+    같은 곡이 여러 문서에 걸쳐 설명되는 경우가 흔해서 오히려 중복을 만들었었다."""
+    game = row.get("game", "")
+    file_links = _parse_list_cell(row.get("_file_links"))
+    if file_links:
+        return (game, "file", file_links[0])
+    ext_links = _parse_list_cell(row.get("_ext_links"))
+    if ext_links:
+        return (game, "ext", ext_links[0])
+    return (game, "title", _guess_title(row))
 
 
 def _load_existing_keys(path: Path) -> set:
@@ -112,31 +143,35 @@ def run_classify(in_csv: str, classified_dir: str):
 
     out_dir = Path(classified_dir)
     review_path = out_dir / "_review.csv"
-    existing_review_keys = _load_existing_keys(review_path)
-    existing_category_keys = {
-        cat: _load_existing_keys(out_dir / f"{cat}.csv") for cat in CATEGORY_KEYWORDS
-    }
+    # 전체 카테고리 + review를 통틀어 "이미 처리된 트랙"을 하나의 집합으로 관리한다.
+    # 카테고리별로 따로 관리하면, 같은 트랙이 서로 다른 위키 문서(예: Terraria의
+    # "Music" 페이지와 "Music Boxes" 페이지)에서 미묘하게 다른 텍스트로 두 번 나올 때
+    # 우연히 다른 카테고리로 갈리면서 중복 투입될 수 있다.
+    seen_keys = _load_existing_keys(review_path)
+    for cat in CATEGORY_KEYWORDS:
+        seen_keys |= _load_existing_keys(out_dir / f"{cat}.csv")
 
     by_category: dict[str, list[dict]] = {cat: [] for cat in CATEGORY_KEYWORDS}
     review_rows: list[dict] = []
+    skipped_dupes = 0
 
     for row in rows:
         key = _dedup_key(row)
+        if key in seen_keys:
+            skipped_dupes += 1
+            continue
+        seen_keys.add(key)
         matched = classify_row(row)
         if len(matched) == 1:
             cat = matched[0]
-            if key not in existing_category_keys[cat]:
-                out_row = dict(row)
-                out_row["biome_category"] = cat  # 스크랩 시점 값(있다면)을 실제 분류로 덮어씀
-                by_category[cat].append(out_row)
-                existing_category_keys[cat].add(key)
+            out_row = dict(row)
+            out_row["biome_category"] = cat  # 스크랩 시점 값(있다면)을 실제 분류로 덮어씀
+            by_category[cat].append(out_row)
         else:
-            if key not in existing_review_keys:
-                review_row = dict(row)
-                review_row["_matched_categories"] = "|".join(matched) if matched else ""
-                review_row["final_category"] = ""
-                review_rows.append(review_row)
-                existing_review_keys.add(key)
+            review_row = dict(row)
+            review_row["_matched_categories"] = "|".join(matched) if matched else ""
+            review_row["final_category"] = ""
+            review_rows.append(review_row)
 
     orig_fields = list(rows[0].keys())
     for cat, cat_rows in by_category.items():
@@ -148,6 +183,9 @@ def run_classify(in_csv: str, classified_dir: str):
         review_fields = orig_fields + ["_matched_categories", "final_category"]
         _append_rows(review_path, review_rows, review_fields)
         print(f"  review (사람 판단 필요): +{len(review_rows)}")
+
+    if skipped_dupes:
+        print(f"  (중복으로 건너뜀: {skipped_dupes}개 — 같은 오디오 파일/링크를 가리키는 행)")
 
     print(f"\n총 {len(rows)}행 처리 완료. 결과: {out_dir}/")
 
