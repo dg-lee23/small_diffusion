@@ -171,5 +171,63 @@ categories:
         zone_is_biome: false
         notes: "스톰윈드(도시), 노움리건(기계) 등 일부 존만 해당."
     caveat: >
-      다른 5개 카테고리와 달리 자연 바이옴이 아니라 인공 테마라 후보 게임 자체가 적음.
+      다른 카테고리와 달리 자연 바이옴이 아니라 인공 테마라 후보 게임 자체가 적음.
+      100곡 목표는 가장 늦게, 가장 낮은 우선순위로 채울 것을 권장 (PLAN.md 4절 참고).
+
+  hell:
+    label_ko: "지옥 / 용암"
+    priority: 3
+    games:
+      - name: "Terraria"
+        wiki_api: "https://terraria.wiki.gg/api.php"
+        zone_is_biome: true
+        notes: "The Underworld(Hell) 바이옴이 이미 있음. cave_underground 스크랩 시 같이 나옴."
+      - name: "Hades"
+        wiki_api: "https://hades.fandom.com/api.php"
+        zone_is_biome: true
+        notes: "Tartarus/Asphodel/Elysium/Styx 등 챔버별로 뚜렷이 구분. 챔버 수가 제한적이라 단독으로는 30곡 안팎."
+      - name: "Diablo"
+        wiki_api: "https://diablo.fandom.com/api.php"
+        zone_is_biome: false
+        notes: "Hell Act 등. 시리즈 전체(1~4) 합치면 물량 확보 용이."
+      - name: "DOOM"
+        wiki_api: "https://doom.fandom.com/api.php"
+        zone_is_biome: false
+        notes: "Hell 레벨. Mick Gordon OST."
+      - name: "World of Warcraft"
+        wiki_api: "https://wowpedia.fandom.com/api.php"
+        zone_is_biome: false
+        notes: "Firelands, Molten Core, Twisting Nether 등 화염/악마 지역만 필터링."
+    caveat: >
+      다른 카테고리와 달리 자연 바이옴이 아니라 신화적/판타지 테마라 후보 게임 자체가 적음.
+      100곡 목표는 가장 늦게, 가장 낮은 우선순위로 채울 것을 권장 (PLAN.md 4절 참고).
+
+  space:
+    label_ko: "우주"
+    priority: 3
+    games:
+      - name: "Terraria"
+        wiki_api: "https://terraria.wiki.gg/api.php"
+        zone_is_biome: true
+        notes: "Space Day/Night 바이옴이 이미 있음. cave_underground 스크랩 시 같이 나옴."
+      - name: "Outer Wilds"
+        wiki_api: "https://outerwilds.fandom.com/api.php"
+        zone_is_biome: true
+        notes: "게임 전체가 우주 탐사, 행성별 테마 뚜렷. 단독으로는 20~30곡 수준."
+      - name: "Mass Effect"
+        wiki_api: "https://masseffect.fandom.com/api.php"
+        zone_is_biome: false
+        notes: "시리즈 전체 합치면 물량 확보 용이."
+      - name: "Destiny"
+        wiki_api: "https://destiny.fandom.com/api.php"
+        zone_is_biome: false
+      - name: "Halo"
+        wiki_api: "https://halo.fandom.com/api.php"
+        zone_is_biome: false
+      - name: "Final Fantasy XIV"
+        wiki_api: "https://ffxiv.consolegameswiki.com/api.php"
+        zone_is_biome: false
+        notes: "Ultima Thule 등 우주/달 지역만 필터링."
+    caveat: >
+      다른 카테고리와 달리 자연 바이옴이 아니라 SF 테마라 후보 게임 자체가 적음.
       100곡 목표는 가장 늦게, 가장 낮은 우선순위로 채울 것을 권장 (PLAN.md 4절 참고).
