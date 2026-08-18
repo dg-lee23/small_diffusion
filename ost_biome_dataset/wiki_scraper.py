@@ -165,13 +165,14 @@ def main():
         print(f"\n총 {len(all_rows)}개 행 파싱됨 (문서: {titles})")
         return
 
-    fieldnames = sorted({k for r in all_rows for k in r.keys()} | {"game", "biome_category"})
+    fieldnames = sorted({k for r in all_rows for k in r.keys()} | {"game", "biome_category", "_wiki_api"})
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for r in all_rows:
             r["game"] = args.game
             r["biome_category"] = args.biome_category
+            r["_wiki_api"] = args.wiki_api  # download_tracks.py가 _file_links를 직접 다운로드할 때 필요
             writer.writerow(r)
     print(f"{len(all_rows)}개 행을 {args.out}에 저장함")
 
