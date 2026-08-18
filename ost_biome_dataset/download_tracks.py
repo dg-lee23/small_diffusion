@@ -49,7 +49,7 @@ def _resolve_source_url(row: dict) -> str:
     return f"ytsearch1:{game} {title} official soundtrack"
 
 
-def download_one(source: str, out_path: Path, dry_run: bool) -> Optional[dict]:
+def download_one(source: str, out_path: Path, dry_run: bool, cookies_from_browser: str = None, cookies_file: str = None) -> Optional[dict]:
     cmd = [
         "yt-dlp",
         "-x",
@@ -60,6 +60,10 @@ def download_one(source: str, out_path: Path, dry_run: bool) -> Optional[dict]:
         "--print-json",
         source,
     ]
+    if cookies_from_browser:
+        cmd += ["--cookies-from-browser", cookies_from_browser]
+    if cookies_file:
+        cmd += ["--cookies", cookies_file]
     if dry_run:
         cmd.insert(1, "--simulate")
     try:
@@ -86,6 +90,12 @@ def main():
     ap.add_argument("--metadata-out", default="metadata.csv")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--limit", type=int, default=None, help="테스트용: 상위 N개만 처리")
+    ap.add_argument(
+        "--cookies-from-browser",
+        help="유튜브 봇 차단(Sign in to confirm you're not a bot) 회피용. 예: chrome, firefox, edge, brave. "
+        "해당 브라우저에 유튜브 로그인이 되어 있어야 함.",
+    )
+    ap.add_argument("--cookies-file", help="브라우저 확장으로 내보낸 cookies.txt 경로 (위 옵션 대안)")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -104,7 +114,7 @@ def main():
         out_path = out_dir / safe_name
 
         print(f"[{i+1}/{len(rows)}] {row.get('game','?')} :: {title}  <- {source}")
-        info = download_one(source, out_path, args.dry_run)
+        info = download_one(source, out_path, args.dry_run, args.cookies_from_browser, args.cookies_file)
 
         metadata_rows.append(
             {
