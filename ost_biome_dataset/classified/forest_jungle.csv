@@ -1,0 +1,32 @@
+#,Area,Compatible biomes,Condition,"Damage<ref name=""plantai""/>",Description,Item,Links,Listen,Name,Projectile,Tile and location requirements,Title,_ext_links,_file_links,_source_page,_wiki_api,biome_category,game
+1,,,"* Forest, daytime",,"A cheerful, upbeat, and simple tune.",,,300px,,,,Overworld Day,,['Music-Overworld Day.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+3,,,"* Forest, night-time
+* The Hallow (surface), night-time",,"Relatively peaceful and relaxing, though in a minor key.",,,300px,,,,Night,,['Music-Overworld Night.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+7,,,"* Jungle, surface, daytime",,"An exotic, relaxed tune, it has a heavy emphasis on percussion.",,,300px,,,,Jungle,,['Music-Jungle.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+18,,,"* Forest, daytime",,"A cheerful, upbeat tune similar to the Overworld Day theme, but with a more complex composition.",,,300px,,,,Alt Overworld Day,,['Music-Alternate Day.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+26,,,* Jungle Temple,,"A mysterious and exotic-sounding theme, feeling like being in an ancient world.",,,300px,,,,Temple,,['Music-Lihzahrd.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+55,,,"* Jungle, surface, night-time",,"It sounds very different from the day theme, with the main melody being a slow, ominous beat with an emphasis on deep drums.",,,300px,,,,Jungle Night,,['Music-Surface Night Jungle.mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+63,,,"* Forest, daytime",,"A celebratory, almost victoriously sounding track which features instruments like Irish flute for a fantasy feeling.",,,300px,,,,Overworld Day (Otherworldly),,['Music-Forest Day (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+64,,,"* Forest, night-time
+* Rain, night-time
+* The Hallow, night-time",,"It is an ominous, at times frantic track that gives a sense of impending danger.",,,300px,,,,Night (Otherworldly),,['Music-Forest Night (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/overworld-day Bandcamp], [https://www.youtube.com/watch?v=3-PA9bexwrA YouTube]",,,,,During Day in the Forest <br/>(when Alt Overworld Day is not playing),400px,,,,,,"['http://re-logic.bandcamp.com/track/overworld-day', 'https://www.youtube.com/watch?v=3-PA9bexwrA']",['Music-Overworld Day.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/alternate-day Bandcamp], [https://www.youtube.com/watch?v=9jItCJU5inM YouTube]",,,,,During Day in the Forest <br/>(when Overworld Day is not playing),400px,,,,,,"['http://re-logic.bandcamp.com/track/alternate-day', 'https://www.youtube.com/watch?v=9jItCJU5inM']",['Music-Alternate Day.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/overworld-night Bandcamp], [https://www.youtube.com/watch?v=dgqRkPTKdI0 YouTube]",,,,,During Night on Surface in the Forest and Hallow,400px,,,,,,"['http://re-logic.bandcamp.com/track/overworld-night', 'https://www.youtube.com/watch?v=dgqRkPTKdI0']",['Music-Overworld Night.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/rain Bandcamp], [https://www.youtube.com/watch?v=syc_nWb6S-s YouTube]",,,,,During Rain in the Forest,400px,,,,,,"['http://re-logic.bandcamp.com/track/rain', 'https://www.youtube.com/watch?v=syc_nWb6S-s']",['Music-Rain.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/jungle Bandcamp], [https://www.youtube.com/watch?v=RXwNK1In2xE YouTube]",,,,,During Day in the Jungle,400px,,,,,,"['http://re-logic.bandcamp.com/track/jungle', 'https://www.youtube.com/watch?v=RXwNK1In2xE']",['Music-Jungle.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,"[http://re-logic.bandcamp.com/track/lihzahrd Bandcamp], [https://www.youtube.com/watch?v=FTtL9-edqMQ YouTube]",,,,,Jungle Temple,400px,,,,,,"['http://re-logic.bandcamp.com/track/lihzahrd', 'https://www.youtube.com/watch?v=FTtL9-edqMQ']",['Music-Lihzahrd.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,[https://www.youtube.com/watch?v=JMUSOWm5ZCs YouTube],,,,,During Night in the Jungle,400px,,,,,,['https://www.youtube.com/watch?v=JMUSOWm5ZCs'],['Music-Surface_Night_Jungle.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,[https://www.youtube.com/watch?v=7fSz0y9Mcp4 YouTube],,,,,"During Rain, in a Forest, between  and",400px,,,,,,['https://www.youtube.com/watch?v=7fSz0y9Mcp4'],['Music-Morning_Rain.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,[https://www.youtube.com/watch?v=hhxG9SDTN9o YouTube],,,,,"During Rain in the Forest<ref name=""OtherworldToggle"" />",400px,,,,,,['https://www.youtube.com/watch?v=hhxG9SDTN9o'],['Music-Rain (Otherworldly).mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,[https://www.youtube.com/watch?v=pkpTNUI7Wjk YouTube],,,,,"During Day in the Forest<ref name=""OtherworldToggle"" />",400px,,,,,,['https://www.youtube.com/watch?v=pkpTNUI7Wjk'],['Music-Forest Day (Otherworldly).mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,[https://www.youtube.com/watch?v=gUsf7d8IrPQ YouTube],,,,,"During Night on Surface in the Forest and Hallow<ref name=""OtherworldToggle"" />",400px,,,,,,['https://www.youtube.com/watch?v=gUsf7d8IrPQ'],['Music-Forest Night (Otherworldly).mp3'],Music Boxes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
+,,All,,,,,,,Jungle,,"At least 140 of the following:
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+*",,,,Biomes,https://terraria.wiki.gg/api.php,forest_jungle,Terraria
