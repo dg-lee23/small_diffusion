@@ -67,10 +67,19 @@ _CELL_SPLIT = re.compile(r"\n\|(?!\|)|\|\|")
 _WIKILINK = re.compile(r"\[\[(?:[^\|\]]*\|)?([^\]]+)\]\]")
 _EXTLINK = re.compile(r"\[(https?://\S+)\s*([^\]]*)\]")
 _FILELINK = re.compile(r"\[\[File:([^\|\]]+)")
+_TEMPLATE = re.compile(r"\{\{[^{}]*\}\}")
+_CELL_ATTR = re.compile(r"^[^|]*\|(?!\|)")  # 셀 맨 앞의 'style="..." |' 같은 속성 prefix
 
 
 def _clean_cell(cell: str) -> str:
     cell = cell.strip().lstrip("|!").strip()
+    # {{anchor|...}}, {{footnote|...}} 같은 템플릿은 반복 제거 (단순 템플릿 중첩까지만 처리)
+    prev = None
+    while prev != cell:
+        prev = cell
+        cell = _TEMPLATE.sub("", cell)
+    if _CELL_ATTR.match(cell) and "=" in cell.split("|", 1)[0]:
+        cell = cell.split("|", 1)[1]
     cell = _WIKILINK.sub(r"\1", cell)
     cell = re.sub(r"'''?", "", cell)
     return cell.strip()
@@ -156,13 +165,14 @@ def main():
         print(f"\n총 {len(all_rows)}개 행 파싱됨 (문서: {titles})")
         return
 
-    fieldnames = sorted({k for r in all_rows for k in r.keys()} | {"game", "biome_category"})
+    fieldnames = sorted({k for r in all_rows for k in r.keys()} | {"game", "biome_category", "_wiki_api"})
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for r in all_rows:
             r["game"] = args.game
             r["biome_category"] = args.biome_category
+            r["_wiki_api"] = args.wiki_api  # download_tracks.py가 _file_links를 직접 다운로드할 때 필요
             writer.writerow(r)
     print(f"{len(all_rows)}개 행을 {args.out}에 저장함")
 
