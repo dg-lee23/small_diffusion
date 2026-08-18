@@ -67,10 +67,19 @@ _CELL_SPLIT = re.compile(r"\n\|(?!\|)|\|\|")
 _WIKILINK = re.compile(r"\[\[(?:[^\|\]]*\|)?([^\]]+)\]\]")
 _EXTLINK = re.compile(r"\[(https?://\S+)\s*([^\]]*)\]")
 _FILELINK = re.compile(r"\[\[File:([^\|\]]+)")
+_TEMPLATE = re.compile(r"\{\{[^{}]*\}\}")
+_CELL_ATTR = re.compile(r"^[^|]*\|(?!\|)")  # 셀 맨 앞의 'style="..." |' 같은 속성 prefix
 
 
 def _clean_cell(cell: str) -> str:
     cell = cell.strip().lstrip("|!").strip()
+    # {{anchor|...}}, {{footnote|...}} 같은 템플릿은 반복 제거 (단순 템플릿 중첩까지만 처리)
+    prev = None
+    while prev != cell:
+        prev = cell
+        cell = _TEMPLATE.sub("", cell)
+    if _CELL_ATTR.match(cell) and "=" in cell.split("|", 1)[0]:
+        cell = cell.split("|", 1)[1]
     cell = _WIKILINK.sub(r"\1", cell)
     cell = re.sub(r"'''?", "", cell)
     return cell.strip()
