@@ -126,7 +126,9 @@ def run_classify(in_csv: str, classified_dir: str):
         if len(matched) == 1:
             cat = matched[0]
             if key not in existing_category_keys[cat]:
-                by_category[cat].append(row)
+                out_row = dict(row)
+                out_row["biome_category"] = cat  # 스크랩 시점 값(있다면)을 실제 분류로 덮어씀
+                by_category[cat].append(out_row)
                 existing_category_keys[cat].add(key)
         else:
             if key not in existing_review_keys:
@@ -173,7 +175,9 @@ def run_apply_review(review_csv: str, classified_dir: str):
         elif decision in ("drop", "skip", "exclude"):
             dropped += 1
         elif decision in CATEGORY_KEYWORDS:
-            decided_by_category.setdefault(decision, []).append(row)
+            out_row = dict(row)
+            out_row["biome_category"] = decision
+            decided_by_category.setdefault(decision, []).append(out_row)
         else:
             print(f"[!] 알 수 없는 카테고리 '{decision}' (행: {_guess_title(row)}) -> review에 남겨둠", )
             still_pending.append(row)

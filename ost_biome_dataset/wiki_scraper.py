@@ -140,7 +140,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--wiki-api", required=True, help="예: https://terraria.wiki.gg/api.php")
     ap.add_argument("--game", required=True)
-    ap.add_argument("--biome-category", required=True, help="games.yaml의 카테고리 ID")
+    ap.add_argument(
+        "--biome-category",
+        default="unclassified",
+        help="초기값일 뿐 classify_tracks.py가 실제 분류 후 덮어씀. 보통 지정 안 해도 됨 "
+        "(위키 한 문서에 여러 바이옴 트랙이 섞여 나오는 경우가 많아서).",
+    )
     ap.add_argument("--page-title", help="문서 제목을 알고 있으면 검색을 건너뛰고 바로 사용")
     ap.add_argument("--out", default="tracks.csv")
     ap.add_argument("--dry-run", action="store_true", help="CSV로 저장하지 않고 콘솔에 미리보기만 출력")
