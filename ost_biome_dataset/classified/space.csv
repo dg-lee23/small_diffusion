@@ -1,17 +1,32 @@
-Name,Played in,_source_page,_wiki_api,biome_category,col2,game
-StarPlanetWaitField,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-StarPlanetGameField,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-StarPlanetMainEvent,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-TodaysFortune,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-StarPlanetWorldEvent,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-InvitavionStarplanet,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-MasterOfKeyBoard,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-YUTYUTYUT,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-VirtualArena,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-LostSpace,Black Mage Boss Battle: Phase 4,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-Tangled Nebula,6th Job Advancement Questline,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-mapleGalaxy,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-mapleGalaxy2,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-GalaxyisDangerous,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-LittleMaplePlanet,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
-MD_InvadeOperation,Hyperspace Cube,Music,https://maplestory.fandom.com/api.php,space,,MapleStory
+Name,Played in,_source_page,_wiki_api,biome_category,col2,game,Title,Location,Mark,Artist,Year,_ext_links
+StarPlanetWaitField,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+StarPlanetGameField,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+StarPlanetMainEvent,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+TodaysFortune,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+StarPlanetWorldEvent,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+InvitavionStarplanet,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+MasterOfKeyBoard,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+YUTYUTYUT,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+VirtualArena,Star Planet,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+LostSpace,Black Mage Boss Battle: Phase 4,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+Tangled Nebula,6th Job Advancement Questline,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+mapleGalaxy,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+mapleGalaxy2,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+GalaxyisDangerous,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+LittleMaplePlanet,Event,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+MD_InvadeOperation,Hyperspace Cube,Music,https://maplestory.fandom.com/api.php,space,,MapleStory,,,,,,
+,,Bgm39,,space,,MapleStory,Star Planet: Invitation,Star Planet intro,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=K7eMwQl7vV8']
+,,Bgm39,,space,,MapleStory,Master of Keyboard,Star Planet: Typing Defense,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=CRRtBbo6Z2E']
+,,Bgm39,,space,,MapleStory,Star Planet: Game Field,Star Planet: Star Arena,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=j5cxr23pgZU']
+,,Bgm39,,space,,MapleStory,Star Planet: Main Event,Star Planet,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=Heb9xARAX3U']
+,,Bgm39,,space,,MapleStory,Star Planet: Wait Field,Star Planet: Lobby,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=ksPcC1AxIZA']
+,,Bgm39,,space,,MapleStory,Star Planet: World Event,"Star Planet world minigame event (1vs100, etc.)",Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=volCxW3z3CY']
+,,Bgm39,,space,,MapleStory,Virtual Arena,Star Planet: Fight! Return of the Legends,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=63PYvVPs_k0']
+,,Bgm39,,space,,MapleStory,Yut Yut Yut,Star Planet game in progress,Starplanet,StudioEIM,2014,['https://www.youtube.com/watch?v=mRXufsvyuUA']
+,,Bgm45,,space,,MapleStory,Jazz for Dr. Lim,Heroes of Maple - Act 3 Cosmic Museum,HofM,StudioEIM,2016,['https://www.youtube.com/watch?v=tKQaAZETKOE']
+,,Bgm50,,space,,MapleStory,Lost Space,Black Mage boss theme (Phase 4),Limen,ASTERIA,2018,['https://www.youtube.com/watch?v=8XP6WdWNaCg']
+,,Bgm59,,space,,MapleStory,Tangled Nebula,6th Job Advancement - Sol Erda,solerda,ASTERIA,2023,['https://www.youtube.com/watch?v=YznuOT5yVKg']
+,,BgmEvent,,space,,MapleStory,14th Anniversary Dynamic Universe,14th anniversary minigame,MapleGalaxy,ASTERIA,2017,['https://www.youtube.com/watch?v=phyPERSwSKg']
+,,BgmEvent,,space,,MapleStory,14th Anniversary Cosmic Main,14th anniversary: Planet Vita,MapleGalaxy,ASTERIA,2017,['https://www.youtube.com/watch?v=4vxWNgyegPw']
+,,BgmPL,,space,,MapleStory,Mission: Invasion,Stellar Detectives: Hyperspace Cube,PL_MapleDetective,ASTERIA,2016,['https://www.youtube.com/watch?v=pCXDV2_wUY4']
+,,BgmStarPlanet_JP,,space,,MapleStory,Star Step,Star Planet: Star Step,Starplanet,StudioEIM,2015,['https://www.youtube.com/watch?v=Z4VTq4JKHGA']

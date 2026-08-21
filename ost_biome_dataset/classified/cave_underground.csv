@@ -1,21 +1,57 @@
-Name,Played in,_source_page,_wiki_api,biome_category,col2,game
-MissingYou,Ellinia Tree Dungeon,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-AbandonedMine,El Nath: Dead Mine,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-MineQuest,Zakum Pre-quest,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-CrystalCave,Rien Mirror Cave & Slumbering Dragon Island,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-PowerStation,Edelstein: Verne Mine,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-DragonTigerDungeon,Gold Dragon Dojo and Red Tiger Dojo (KMS event),Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-BlackDungeon,Morass: Dungeon,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-WhereTheSecretLies,Ristonia: Underground Passage,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-BeastTamerKoboltCave,Arboren: Kobold Pit,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-goldTempleDungeonTH,Golden Temple: Abandoned Temple,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-AncientMove,Sleepywood: Drake Cave and Ant Tunnel Square,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-WolfWood,El Nath: Dead Mine (Cliffs),Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-DownToTheCave,"Unused, duplicate of AncientMove",Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-CaveOfHontale,Leafre's Cave of Life,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-DeepCave,Chao Boss Battle,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-UndergroundPlace,Edelstein: Secret Plaza,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-HazardFromCave,Tower of Oz,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-Cave Of Rest,Vanishing Journey: Cave of Repose,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-RetroWorldDungeon,Event: Retro World,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
-Into The Dungeon,GOGOA Headset,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory
+Name,Played in,_source_page,_wiki_api,biome_category,col2,game,Title,Location,Mark,Artist,Year,_ext_links
+MissingYou,Ellinia Tree Dungeon,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+AbandonedMine,El Nath: Dead Mine,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+MineQuest,Zakum Pre-quest,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+CrystalCave,Rien Mirror Cave & Slumbering Dragon Island,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+PowerStation,Edelstein: Verne Mine,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+DragonTigerDungeon,Gold Dragon Dojo and Red Tiger Dojo (KMS event),Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+BlackDungeon,Morass: Dungeon,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+WhereTheSecretLies,Ristonia: Underground Passage,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+BeastTamerKoboltCave,Arboren: Kobold Pit,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+goldTempleDungeonTH,Golden Temple: Abandoned Temple,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+AncientMove,Sleepywood: Drake Cave and Ant Tunnel Square,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+WolfWood,El Nath: Dead Mine (Cliffs),Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+DownToTheCave,"Unused, duplicate of AncientMove",Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+CaveOfHontale,Leafre's Cave of Life,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+DeepCave,Chao Boss Battle,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+UndergroundPlace,Edelstein: Secret Plaza,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+HazardFromCave,Tower of Oz,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+Cave Of Rest,Vanishing Journey: Cave of Repose,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+RetroWorldDungeon,Event: Retro World,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+Into The Dungeon,GOGOA Headset,Music,https://maplestory.fandom.com/api.php,cave_underground,,MapleStory,,,,,,
+,,Bgm00,,cave_underground,,MapleStory,Sleepywood,Sleepywood,Dungeon,StudioEIM,2003,['https://www.youtube.com/watch?v=tWCWIhA3XQw']
+,,Bgm01,,cave_underground,,MapleStory,Ancient Move,Sleepywood: Ant Tunnel,Dungeon,StudioEIM,2003,['https://www.youtube.com/watch?v=w9HagZ099c0']
+,,Bgm01,,cave_underground,,MapleStory,Highland Star,"Perion field, Perion dungeon",Perion,CODASOUND,2003,['https://www.youtube.com/watch?v=DIuiKBGxPLA']
+,,Bgm02,,cave_underground,,MapleStory,Evil Eyes,"Sleepywood: Deep Ant Tunnel, Cave of Evil Eyes",Dungeon,CODASOUND,2003,['https://www.youtube.com/watch?v=N49FmJJnfy0']
+,,Bgm02,,cave_underground,,MapleStory,Missing You,Ellinia Tree Dungeon,Ellinia,CODASOUND,2003,['https://www.youtube.com/watch?v=2NoF8PHQJqQ']
+,,Bgm03,,cave_underground,,MapleStory,Cavern of Shadows,Forgotten Hollow - Deep Passage,ForgottenHollow,ASTERIA,2026,['https://www.youtube.com/watch?v=N9sO6Fk3a6I']
+,,Bgm05,,cave_underground,,MapleStory,Abandoned Mine,El Nath: Dead Mine,ElNathDungeon,CODASOUND,2004,['https://www.youtube.com/watch?v=WmHOENuKkmk']
+,,Bgm05,,cave_underground,,MapleStory,Mine Quest,El Nath: Zakum Quest,ElNathDungeon,StudioEIM,2004,['https://www.youtube.com/watch?v=8LaAGZ5kxvk']
+,,Bgm12,,cave_underground,,MapleStory,Aqua Cave,Pianus boss theme,Pianus,StudioEIM,2006,['https://www.youtube.com/watch?v=ctsqJ-Xl9_0']
+,,Bgm14,,cave_underground,,MapleStory,Cave of Horntail,Leafre: Cave of Life,Leafre,StudioEIM,2006,['https://www.youtube.com/watch?v=Lo59n_tMGSM']
+,,Bgm22,,cave_underground,,MapleStory,Gelimer Lab,Verne Mine: Gelimer Research Lab,Leben,StudioEIM,2010,['https://www.youtube.com/watch?v=6igTXgoof68']
+,,Bgm22,,cave_underground,,MapleStory,Power Station,Verne Mine: Power Plant,Leben,StudioEIM,2010,['https://www.youtube.com/watch?v=HWZesN4Uj-Y']
+,,Bgm22,,cave_underground,,MapleStory,Underground Place,Edelstein: Resistance Headquarters,Edelstein,StudioEIM,2010,['https://www.youtube.com/watch?v=SNuR31g7gqI']
+,,Bgm37,,cave_underground,,MapleStory,Hazard from the Cave,"Tower of Oz - 26F, 27F, 34F",aquarisTower,StudioEIM,2014,['https://www.youtube.com/watch?v=STDN57rytW8']
+,,Bgm46,,cave_underground,,MapleStory,The Cave of Peace,Road of Vanishing: Cave of Rest,Road of Vanishing,ASTERIA,2016,['https://www.youtube.com/watch?v=mRV7syEa_jk']
+,,Bgm47,,cave_underground,,MapleStory,Shadow of Incongruity,Arcana: Labyrinthine Cavern,Arcana,ASTERIA,2017,['https://www.youtube.com/watch?v=egACrpCsMwE']
+,,Bgm48,,cave_underground,,MapleStory,Black Dungeon,Morass dungeon,Morass,ASTERIA,2017,['https://www.youtube.com/watch?v=PX7VGJ51raw']
+,,Bgm53,,cave_underground,,MapleStory,Where the Secret Lies,Ristonia: Underground Passage,Ristonia,ASTERIA,2020,['https://www.youtube.com/watch?v=Ke0GYnF3990']
+,,BgmBT,,cave_underground,,MapleStory,Beast Tamer: Kobolt Cave,Arboren: Kobold Pit,ArbrenBT,StudioEIM,2014,['https://www.youtube.com/watch?v=Pyfqoim3jPA']
+,,BgmCN,,cave_underground,,MapleStory,Dragon Tiger Dungeon,Beasts of Fury: Gold Dragon Dojo interior,CN_DragonTiger,StudioEIM,2014,['https://www.youtube.com/watch?v=apwKSQfDkvY']
+,,BgmEvent3,,cave_underground,,MapleStory,Tunnel of Darkness,2024 Dave the Diver collaboration,Goldrich,Mintrocket,2024,['https://www.youtube.com/watch?v=wEeYUbY_lO0']
+,,BgmEvent3,,cave_underground,,MapleStory,Timeworn Tunnel,2024 Dave the Diver collaboration,Goldrich,Mintrocket,2024,['https://www.youtube.com/watch?v=wQhV9Ppffyc']
+,,BgmSG_HeadPhone,,cave_underground,,MapleStory,Into the Dungeon,GOGOA Headset: Mushroom Power ft. Sleedpy Brothers,1005643,ASTERIA,2020,['https://www.youtube.com/watch?v=ff-4__wv1gE']
+,,BgmTH,,cave_underground,,MapleStory,Golden Temple Dungeon,Golden Temple dungeon,GoldTempleTH,StudioEIM,2007,['https://www.youtube.com/watch?v=VoHtZ3sKsOY']
+,,BgmWz2,,cave_underground,,MapleStory,Malitia - Inside,Malitia - Phase 1 Inside,RedMoon_Dungeon,ASTERIA,2025,['https://www.youtube.com/watch?v=TF9O_jSFGhk']
+,,BgmWz2,,cave_underground,,MapleStory,Into the Darkness,Malitia - Phase 2 & 3,RedMoon_Dungeon,ASTERIA,2025,['https://www.youtube.com/watch?v=Py3FxqGW-pI']
+,,BgmWz2,,cave_underground,,MapleStory,Malitia - Outside,Malitia - Phase 1 Outside,RedMoon_Dungeon,ASTERIA,2025,['https://www.youtube.com/watch?v=Du6P8xj0EpM']
+,,BgmWz2,,cave_underground,,MapleStory,The Breeze That Carried Sorrow,Malitia - reward map,RedMoon_Dungeon,ASTERIA,2025,['https://www.youtube.com/watch?v=s_sBbxdA-jQ']
+,,BgmWz2,,cave_underground,,MapleStory,Malitia - The End,Malitia - Phase 4,RedMoon_Dungeon,ASTERIA,2025,['https://www.youtube.com/watch?v=2-Vj0feWmT0']
+,,BgmWz2,,cave_underground,,MapleStory,Guild Castle - Follow the Light Leaks,Guild Castle dungeon,GuildCastle_Dungeon,ASTERIA,2023,['https://www.youtube.com/watch?v=z-Bh-VNWEkA']
+,,BgmWz2,,cave_underground,,MapleStory,Guild Castle - Follow the Light Leaks (Original),Guild Castle dungeon,GuildCastle_Dungeon,ASTERIA,2023,['https://www.youtube.com/watch?v=kjccd3lrGPM']
+,,GL_Operation,,cave_underground,,MapleStory,Operation Dungeon - Boss,Operation: Dive (Phase 2) event - Dark Magic Laboratory,Parallel_Magatia,ASTERIA,2026,['https://www.youtube.com/watch?v=oBqaK2YDcSE']
+,,GL_Operation,,cave_underground,,MapleStory,Operation Dungeon - Elite Boss,Operation: Dive (Phase 2) event - Dark Magic Laboratory,Parallel_Magatia,ASTERIA,2026,['https://www.youtube.com/watch?v=TnGj0MZft7I']
+,,GL_Operation,,cave_underground,,MapleStory,Operation Dungeon - Normal,Operation: Dive (Phase 2) event - Dark Magic Laboratory,Parallel_Magatia,ASTERIA,2026,['https://www.youtube.com/watch?v=v6GD181flvg']
+,,GL_Operation,,cave_underground,,MapleStory,Operation Dungeon - Shop,Operation: Dive (Phase 2) event - Dark Magic Laboratory,Parallel_Magatia,ASTERIA,2026,['https://www.youtube.com/watch?v=-SfTQ0uUOCA']
+,,GL_RideOrDie,,cave_underground,,MapleStory,Ride or Die - Cave,2024 Ride or Die event,2024DarkRide,ASTERIA,2024,['https://www.youtube.com/watch?v=N2cLsMEl4Fo']

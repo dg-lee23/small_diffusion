@@ -1,43 +1,99 @@
-#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BlueSky,Henesys: Dreamy Forest Trail,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,AcientForest,Leafre Fields,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,DragonLoad,Leafre: Dragon Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ElinForest,Ellin Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PoisonForest,Ellin Forest: Fairy Forest<br />Forest of Poison Haze,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,helisiumMysticforest,Heliseum: Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TheFairyForest,Ellinel Lake,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SwampOfMemoryMoras,Morass: Coral Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SecretElodin,Elodin Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MysteriousTotemintheJungle,Bounty Hunter Portal: Esfetia (Totem Slash),
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MushbudForest,"Yum Yum Island: Yum Yum Village, Mushbud Forest",
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FungusForest,Yum Yum Island: Fungos Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FungusForestB,Yum Yum Island Questline,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SleepyWood,Sleepywood,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MoonlightShadow,Ellinia Fields,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,WhenTheMorningComes,Ellinia,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,EvilEyes,Sleepywood: Cursed Temple,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Leafre,Leafre,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Minar'sDream,Leafre Fields,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,IlliyardMoor_Lofi,Illiyard (Lofi ver.),
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Leafre_Lofi,Leafre (Lofi ver.),
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ElinCave,Ellin Forest: Rocky Mountain Cave,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FindingForest,Omega Sector: Kulan Field (unused),
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MureungForest,Mu Lung Fields,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PeacefulWoods,Luminous Tutorial,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BurningWoods,Luminous Tutorial,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,DarkWoods,Luminous Questline,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TheStormyForest,Grand Athenaeum Chapter 1: The White Mage,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TragicForest,Kritias Fields,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,JungleInTheSea,Tower of Oz,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,WierldForestIntheGirlsdream,Lucid Boss Battle: Phase 1,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,commerzForest,Commerci Republic: Sospetto Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Bigfoot,Crimsonwood: Phantom Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PhantomForest,Crimsonwood: Phantom Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BizarreForest,Mushroom Shrine: Cemetery / Vanished Village,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Elfwoods,Unused,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Kamuna,Mushroom Shrine: Forest of Oblivion / Kamuna,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SleepingForest,Monad: Act 2 Windsleep Forest,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,goldTempleFieldTH,Golden Temple: Forest of Training,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ArisanForest,Alishan (unused),
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,GuildCastle_Piano_08_HelisiumForest,Guild Castle: Dining Room Piano,
-,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Whisper,Crimsonwood: Phantom Forest + Crimsonwood Mountain (Low sanity),
+#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2,Location,Mark,Artist,Year,_ext_links
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BlueSky,Henesys: Dreamy Forest Trail,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,AcientForest,Leafre Fields,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,DragonLoad,Leafre: Dragon Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ElinForest,Ellin Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PoisonForest,Ellin Forest: Fairy Forest<br />Forest of Poison Haze,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,helisiumMysticforest,Heliseum: Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TheFairyForest,Ellinel Lake,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SwampOfMemoryMoras,Morass: Coral Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SecretElodin,Elodin Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MysteriousTotemintheJungle,Bounty Hunter Portal: Esfetia (Totem Slash),,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MushbudForest,"Yum Yum Island: Yum Yum Village, Mushbud Forest",,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FungusForest,Yum Yum Island: Fungos Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FungusForestB,Yum Yum Island Questline,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SleepyWood,Sleepywood,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MoonlightShadow,Ellinia Fields,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,WhenTheMorningComes,Ellinia,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,EvilEyes,Sleepywood: Cursed Temple,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Leafre,Leafre,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Minar'sDream,Leafre Fields,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,IlliyardMoor_Lofi,Illiyard (Lofi ver.),,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Leafre_Lofi,Leafre (Lofi ver.),,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ElinCave,Ellin Forest: Rocky Mountain Cave,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,FindingForest,Omega Sector: Kulan Field (unused),,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,MureungForest,Mu Lung Fields,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PeacefulWoods,Luminous Tutorial,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BurningWoods,Luminous Tutorial,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,DarkWoods,Luminous Questline,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TheStormyForest,Grand Athenaeum Chapter 1: The White Mage,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,TragicForest,Kritias Fields,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,JungleInTheSea,Tower of Oz,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,WierldForestIntheGirlsdream,Lucid Boss Battle: Phase 1,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,commerzForest,Commerci Republic: Sospetto Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Bigfoot,Crimsonwood: Phantom Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,PhantomForest,Crimsonwood: Phantom Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,BizarreForest,Mushroom Shrine: Cemetery / Vanished Village,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Elfwoods,Unused,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Kamuna,Mushroom Shrine: Forest of Oblivion / Kamuna,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,SleepingForest,Monad: Act 2 Windsleep Forest,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,goldTempleFieldTH,Golden Temple: Forest of Training,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,ArisanForest,Alishan (unused),,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,GuildCastle_Piano_08_HelisiumForest,Guild Castle: Dining Room Piano,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,forest_jungle,MapleStory,Whisper,Crimsonwood: Phantom Forest + Crimsonwood Mountain (Low sanity),,,,,,
+,,Blue Sky,Bgm03,,forest_jungle,MapleStory,,,,"Mushroom Castle, Kerning L Forest",MushCatle,CODASOUND,2003,['https://www.youtube.com/watch?v=ClLLtA3naSo']
+,,Wolf Woods,Bgm05,,forest_jungle,MapleStory,,,,El Nath: Wolves' Territory,ElNath,StudioEIM,2004,['https://www.youtube.com/watch?v=1MPBnVU8_I4']
+,,Finding Forest,Bgm08,,forest_jungle,MapleStory,,,,Omega Sector: Kulan Field,OmegaSector,StudioEIM,2004,['https://www.youtube.com/watch?v=dT0laG5urcc']
+,,Ancient Forest,Bgm13,,forest_jungle,MapleStory,,,,Leafre: Kentaurus Field,Leafre,StudioEIM,2006,['https://www.youtube.com/watch?v=pWi9HXGWn2k']
+,,Minar's Dream,Bgm13,,forest_jungle,MapleStory,,,,Leafre: Minar Forest,Leafre,StudioEIM,2006,['https://www.youtube.com/watch?v=07a-UZLcxhM']
+,,Dragon Load,Bgm14,,forest_jungle,MapleStory,,,,Leafre: Dragon Forest,Leafre,StudioEIM,2006,['https://www.youtube.com/watch?v=z3jhg8KffPI']
+,,Elin Forest,Bgm15,,forest_jungle,MapleStory,,,,Ellin Forest,EilnForest,StudioEIM,2008,['https://www.youtube.com/watch?v=8FShyABhIAs']
+,,Mureung Forest,Bgm15,,forest_jungle,MapleStory,,,,Mu Lung forest,Murueng,StudioEIM,2007,['https://www.youtube.com/watch?v=OweBGLQHWaA']
+,,Poison Forest,Bgm15,,forest_jungle,MapleStory,,,,Ellin Forest: Fairy Forest,PoisonForest,StudioEIM,2008,['https://www.youtube.com/watch?v=tc61Xjl4_X8']
+,,Queen's Hideout,Bgm15,,forest_jungle,MapleStory,,,,Ellin Forest: Ephenia boss theme,EilnForest,StudioEIM,2011,['https://www.youtube.com/watch?v=tjMTX_gB6bI']
+,,Mu Lung Raid 1,Bgm17,,forest_jungle,MapleStory,,,,"Mu Lung Dojo First Tier, Foggy Forest Training Center",ForestTraining,StudioEIM,2008,['https://www.youtube.com/watch?v=bqR0o6TkkQk']
+,,Burning Woods,Bgm26,,forest_jungle,MapleStory,,,,Luminous tutorial,Ellinia,StudioEIM,2012,['https://www.youtube.com/watch?v=fPVOc5uau1M']
+,,Dark Woods,Bgm26,,forest_jungle,MapleStory,,,,Luminous storyline,Ellinia,StudioEIM,2012,['https://www.youtube.com/watch?v=ekBYanDkybM']
+,,Peaceful Woods,Bgm26,,forest_jungle,MapleStory,,,,Luminous tutorial,Ellinia,StudioEIM,2012,['https://www.youtube.com/watch?v=6BqN9qhPoGQ']
+,,Helisium Mystic Forest,Bgm28,,forest_jungle,MapleStory,,,,Heliseum Forest,helisium,StudioEIM,2012,['https://www.youtube.com/watch?v=01M2hR6BMHY']
+,,The Fairy Forest,Bgm34,,forest_jungle,MapleStory,,,,Ellinel Waterfront,fairyAcademy,StudioEIM,2013,['https://www.youtube.com/watch?v=2516kMhpTHA']
+,,The Stormy Forest,Bgm34,,forest_jungle,MapleStory,,,,Grand Athenaeum: Episode 1,Library,StudioEIM,2013,['https://www.youtube.com/watch?v=hf7bujCvxrI']
+,,Tragic Forest,Bgm35,,forest_jungle,MapleStory,,,,Kritias field - before invasion,critias,StudioEIM,2013,['https://www.youtube.com/watch?v=XLAlhsGXgxY']
+,,Phantasmal Woods,Bgm46,,forest_jungle,MapleStory,,,,Lucid boss theme (Phase 1),Lacheln,ASTERIA,2016,['https://www.youtube.com/watch?v=pEna89Xk90U']
+,,"Swamp of Memory, Morass",Bgm48,,forest_jungle,MapleStory,,,,Morass: Coral Forest,Morass,ASTERIA,2017,['https://www.youtube.com/watch?v=wxKpwjrQKGg']
+,,Luen's House,Bgm51,,forest_jungle,MapleStory,,,,Secret Forest Elodin: Luen's House,Elodin,ASTERIA,2019,['https://www.youtube.com/watch?v=P8SFaafyKSo']
+,,Mysterious Totem in the Jungle,Bgm51,,forest_jungle,MapleStory,,,,Bounty Hunter portals,Partem,ASTERIA,2022,['https://www.youtube.com/watch?v=jRV5PAqIzc0']
+,,Secret Elodin,Bgm51,,forest_jungle,MapleStory,,,,Secret Forest Elodin,Elodin,ASTERIA,2019,['https://www.youtube.com/watch?v=VOD3PtOQr2Q']
+,,Fungus Forest,Bgm54,,forest_jungle,MapleStory,,,,Yum Yum Island: Fungus Forest,YumYum,ASTERIA,2020,['https://www.youtube.com/watch?v=h3EKe2b5kYI']
+,,Fungus Forest -Ver. B-,Bgm54,,forest_jungle,MapleStory,,,,Yum Yum Island: Fungus Forest,YumYum,ASTERIA,2020,['https://www.youtube.com/watch?v=DrCzk_r0tUE']
+,,Mushbud Forest,Bgm54,,forest_jungle,MapleStory,,,,Yum Yum Island: Yum Yum Village,YumYum,Initium SoundLab,2020,['https://www.youtube.com/watch?v=TD0abMaS0Sk']
+,,Celestial Passage,Bgm60,,forest_jungle,MapleStory,,,,Training Ground - Sky Crossroads,ForestTraining,ASTERIA,2026,['https://www.youtube.com/watch?v=BCINqGq4AKk']
+,,Emerald Jungle,Bgm60,,forest_jungle,MapleStory,,,,Champion Raid - Dragon Island,championRaid,ASTERIA,2025,['https://www.youtube.com/watch?v=8qpl5IRUtbs']
+,,Recurring Dawn,Bgm60,,forest_jungle,MapleStory,,,,Training Ground - Sky Crossroads,ForestTraining,ASTERIA,2026,['https://www.youtube.com/watch?v=XINjCPiJ-kg']
+,,The Great Tropics,Bgm60,,forest_jungle,MapleStory,,,,Carcion: Entangling Forest,carcion,ASTERIA,2023,['https://www.youtube.com/watch?v=hbY-c7_zUUA']
+,,Zenith Drift,Bgm60,,forest_jungle,MapleStory,,,,Training Ground - Sky Crossroads,ForestTraining,ASTERIA,2026,['https://www.youtube.com/watch?v=Vfu4UuVBfyU']
+,,Blooming Forest,BgmEvent,,forest_jungle,MapleStory,,,,18th anniversary: Blooming Forest,18th_Event,ASTERIA,2021,['https://www.youtube.com/watch?v=-10jd1l4ioU']
+,,Nightmare Forest,BgmEvent4,,forest_jungle,MapleStory,,,,Lucid Nightmare Forest event,LucidNightmareForest,ASTERIA,2026,['https://www.youtube.com/watch?v=o3k-Ajw3ohs']
+,,Shattered Time - Garden of Eternal Dream,BgmEvent4,,forest_jungle,MapleStory,,,,Lucid's Garden of Eternal Dream skill,LucidNightmareForest,ASTERIA,2026,['https://www.youtube.com/watch?v=Hv6fAamCEjU']
+,,Jungle Pursuit,BgmGL,,forest_jungle,MapleStory,,,,Masteria Through Time: Act 1 Krakian Jungle,GLblockbuster,ASTERIA,2016,['https://www.youtube.com/watch?v=GKfCI58qgwM']
+,,Phantom Forest (Original),BgmGL,,forest_jungle,MapleStory,,,,Crimsonwood: Phantom Forest (pre-2019),Crimsonwood,StudioEIM,2008,['https://www.youtube.com/watch?v=JDK9B4IWxdg']
+,,Bizarre Forest,BgmJp,,forest_jungle,MapleStory,,,,"Zipangu: Mushroom Shrine Cemetery, Pine Forest",jipangu,CODASOUND,2004,['https://www.youtube.com/watch?v=9kmYUElcL_w']
+,,Deer My Dear,BgmLYNN,,forest_jungle,MapleStory,,,,Lynn storyline,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=1IjkMl4uvow']
+,,Empty Wishes,BgmLYNN,,forest_jungle,MapleStory,,,,Lynn storyline,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=V0K-Iqk10w8']
+,,Into the Woods,BgmLYNN,,forest_jungle,MapleStory,,,,Forest of Eternity field,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=ZYOHMiayA7k']
+,,My Little Cottage,BgmLYNN,,forest_jungle,MapleStory,,,,Forest of Eternity: Forest Entrance Cabin,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=eZiLN1NBahU']
+,,Our Story Goes On,BgmLYNN,,forest_jungle,MapleStory,,,,Forest of Eternity: Fountain of Reincarnation,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=ky0dsOW2tZY']
+,,Whispers of the Trees,BgmLYNN,,forest_jungle,MapleStory,,,,Forest of Eternity field,ForestofEternity,ASTERIA,2024,['https://www.youtube.com/watch?v=VuawsyejZVc']
+,,Sleeping Forest,BgmPL2,,forest_jungle,MapleStory,,,,Monad: Act 2 Windsleep Forest,PL_Abrup,ASTERIA,2018,['https://www.youtube.com/watch?v=YbAxZANl7us']
+,,Along With You,BgmPL2,,forest_jungle,MapleStory,,,,Monad: Act 2 Windsleep Forest,PL_Abrup,ASTERIA,2018,['https://www.youtube.com/watch?v=hScIi77G0II']
+,,Arisan Forest,BgmTW,,forest_jungle,MapleStory,,,,Alishan Forest Road,Arisan,StudioEIM,2015,['https://www.youtube.com/watch?v=UhtL8QLEIyM']
+,,Arisan Train,BgmTW,,forest_jungle,MapleStory,,,,Alishan Forest Train,Arisan,StudioEIM,2015,['https://www.youtube.com/watch?v=DHCiyODEdUs']
+,,Helisium Mystic Forest -Piano ver.-,BgmWz2,,forest_jungle,MapleStory,,,,Guild Castle jukebox,GuildCastle,ASTERIA,2023,['https://www.youtube.com/watch?v=ltnQzIqyKF8']
+,,Remember,BgmWz2,,forest_jungle,MapleStory,,,,Red Moon Forest storyline,RedMoon,ASTERIA,2025,['https://www.youtube.com/watch?v=ZEQsmRCKXXQ']
+,,Cerberusian,GL_Masteria,,forest_jungle,MapleStory,,,,Krakian Jungle: Excavation Site,NLC,ASTERIA,2019,['https://www.youtube.com/watch?v=c1iOUKGxcKY']
+,,Nostalgia,GL_Masteria,,forest_jungle,MapleStory,,,,Krakian Jungle,NLC,ASTERIA,2019,['https://www.youtube.com/watch?v=d9yQgNcuUhA']
+,,Phantom Forest,GL_Masteria,,forest_jungle,MapleStory,,,,Crimsonwood: Phantom Forest,Crimsonwood,ASTERIA,2019,['https://www.youtube.com/watch?v=8sRMf0ZhAtw']
+,,Resurrection,GL_Masteria,,forest_jungle,MapleStory,,,,Crimsonwood: Phantom Forest boss theme,Crimsonwood,ASTERIA,2019,['https://www.youtube.com/watch?v=eqz3XODQj1c']
+,,Whisper,GL_Masteria,,forest_jungle,MapleStory,,,,Crimsonwood: Phantom Forest (Sanity effect),Crimsonwood,ASTERIA,2019,['https://www.youtube.com/watch?v=ZoDAV2hJ1WU']
+,,Fate Forest,GL_Sia,,forest_jungle,MapleStory,,,,Oort: Star Forest,GL_Oort,ASTERIA,2025,['https://www.youtube.com/watch?v=AsJ2ehBy1es']
+,,Beautyroid Forest,PL_Beautyroid,,forest_jungle,MapleStory,,,,Mechanical Hearts: Aspire Industries forest hideout,PL_Beautyroid,ASTERIA,2017,['https://www.youtube.com/watch?v=wnSwoYrY70Q']

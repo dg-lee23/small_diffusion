@@ -1,8 +1,20 @@
-#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,HellGate,El Nath: Dead Mine (Caves of Trial)<br />Showa: The Secret Spa,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,WelcomeToTheHell,Zakum Boss Battle,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,DespairOnDevil,Demon Tutorial,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,DecisiveBattle,Demon<br />Leafre of Past,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Demon's eye,FriendStory Chapter 6,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Demon's eye2,FriendStory Chapter 6,
-,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Volcanic Zone Of Extinction,Vanishing Journey: Extinction Zone,
+#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2,Location,Mark,Artist,Year,_ext_links
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,HellGate,El Nath: Dead Mine (Caves of Trial)<br />Showa: The Secret Spa,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,WelcomeToTheHell,Zakum Boss Battle,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,DespairOnDevil,Demon Tutorial,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,DecisiveBattle,Demon<br />Leafre of Past,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Demon's eye,FriendStory Chapter 6,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Demon's eye2,FriendStory Chapter 6,,,,,,
+,,,Music,https://maplestory.fandom.com/api.php,hell,MapleStory,Volcanic Zone Of Extinction,Vanishing Journey: Extinction Zone,,,,,,
+,,Welcome to Hell,Bgm06,,hell,MapleStory,,,,El Nath: Zakum's Altar,Zakum,StudioEIM,2004,['https://www.youtube.com/watch?v=3EJFx4emHyk']
+,,Decisive Battle,Bgm22,,hell,MapleStory,,,,"Leafre of Past, Demon Slayer tutorial",TimeTemple,StudioEIM,2011,['https://www.youtube.com/watch?v=EcjYXo4qxs0']
+,,Despair on Devil,Bgm22,,hell,MapleStory,,,,Demon Slayer tutorial,Leafre,StudioEIM,2011,['https://www.youtube.com/watch?v=e-USJPLjJQ4']
+,,Demon's Eye,Bgm42,,hell,MapleStory,,,,FriendStory Rock & Roll - Damien's first performance,spinOff1,StudioEIM,2015,['https://www.youtube.com/watch?v=m7-KSFVZJzk']
+,,Demon's Eye 2,Bgm42,,hell,MapleStory,,,,FriendStory Rock & Roll - Damien's concert performance,spinOff1,StudioEIM,2015,['https://www.youtube.com/watch?v=RaXC3bWEYFc']
+,,Army of Fears Theme,Bgm45,,hell,MapleStory,,,,Heroes of Maple - Demon Army theme,HofM,StudioEIM,2015,['https://www.youtube.com/watch?v=DzyjPxP0GSg']
+,,Heroes of Maple Theme ~piano~,Bgm45,,hell,MapleStory,,,,Heroes of Maple - Act 4 Demon & Damien,HofM,StudioEIM,2015,['https://www.youtube.com/watch?v=kMW_CaKNrRY']
+,,Volcanic Mountain,Bgm46,,hell,MapleStory,,,,Road of Vanishing: Flame Zone of Extinction,Road of Vanishing,ASTERIA,2016,['https://www.youtube.com/watch?v=TihEE_rTcW4']
+,,The Final Stage,BgmPL,,hell,MapleStory,,,,Retro World: Demon King boss theme,PL_RetroWorld,ASTERIA,2018,['https://www.youtube.com/watch?v=zvXnHdqbCNk']
+,,Action Trap,BgmPL,,hell,MapleStory,,,,Retro World: Demon King's Tower,PL_RetroWorld,ASTERIA,2018,['https://www.youtube.com/watch?v=GSG5FxqIu4g']
+,,Demon Slayer - Event,SoundEff_collabo,,hell,MapleStory,,,,2024 Demon Slayer collaboration,2024Collabo,ASTERIA,2024,['https://www.youtube.com/watch?v=sq5TT0P_iI8']
+,,Demon Slayer - Minigame,SoundEff_collabo,,hell,MapleStory,,,,2024 Demon Slayer collaboration,2024Collabo,ASTERIA,2024,['https://www.youtube.com/watch?v=TyEV6tAY5vQ']
