@@ -1,12 +1,3 @@
-#,Area,Compatible biomes,Condition,"Damage<ref name=""plantai""/>",Description,Item,Links,Listen,Name,Projectile,Tile and location requirements,Title,_ext_links,_file_links,_source_page,_wiki_api,biome_category,game
-22,,,"* Ocean, daytime",,It is a tranquil theme with a somewhat slower pace than other daytime themes.,,,300px,,,,Ocean Day,,['Music-Ocean Day.mp3'],Music,https://terraria.wiki.gg/api.php,sea_underwater,Terraria
-43,,,"* Ocean, night-time",,"This track is more active and bouncier than its daytime counterpart. It has a happy, peaceful sounding tone.",,,300px,,,,Ocean Night,,['Music-Ocean Night.mp3'],Music,https://terraria.wiki.gg/api.php,sea_underwater,Terraria
-67,,,* Ocean,,An ambient-like track which incorporates pan flute music to produce the image of distant shores.,,,300px,,,,Ocean (Otherworldly),,['Music-Ocean (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,sea_underwater,Terraria
-58,,,* Duke Fishron,,"A slow theme with bubbling sounds and a pirate-like feel, in stark contrast with the fast-paced and chaotic fight it accompanies.",,,300px,,,,Duke Fishron,,['Music-Duke Fishron.mp3'],Music,https://terraria.wiki.gg/api.php,sea_underwater,Terraria
-18,,,During the Alterra Science Update trailer and Underwater Islands,2:10,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Alterra Science,
-21,,,When in the Seamoth or Prawn Suit and near the Floating Island,1:34,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Arc Lights,
-22,,,"Blood Kelp Zone, Grand Reef, Deep Grand Reef",1:43,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Blood Crawlers,
-39,,,"In Bulb Zone, Grassy Plateaus, Sea Treader's Path, Sparse Reef and Underwater Islands.",2:47,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Islands Beneath the Sea,
-42,,,"When the player repairs the Drive Core, the Sea Emperor Leviathan dies, and the player cures themself",1:18,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Cycle of Life,
-43,,,"When the player enters the Lost River, Grand Reef, Deep Grand Reef, & Bulb Zone biomes",1:21,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Lost River,
-51,,,When the player is in the Grassy Plateaus,2:04,,,,Subnautica OST,https://subnautica.fandom.com/api.php,sea_underwater,,Subnautica,Shadow of the Reefback,
+#,Time,Title,_source_page,_wiki_api,biome_category,game
+7,2:58,Seasons of War,World of Warcraft Soundtrack,https://wowpedia.fandom.com/api.php,sea_underwater,World of Warcraft
+10,5:21,Seat of the Primus,Shadowlands Soundtrack,https://wowpedia.fandom.com/api.php,sea_underwater,World of Warcraft

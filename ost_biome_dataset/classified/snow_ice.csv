@@ -1,13 +1,2 @@
-#,Area,Compatible biomes,Condition,"Damage<ref name=""plantai""/>",Description,Item,Links,Listen,Name,Projectile,Tile and location requirements,Title,_ext_links,_file_links,_source_page,_wiki_api,biome_category,game
-14,,,* Snow biome,,"A relaxed, somewhat slow-paced theme with a distinct, cold, and crystalline feel.",,,300px,,,,Snow,,['Music-Snow.mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-20,,,* Ice biome,,"A calm, mysterious, and wintery theme slightly reminiscent of the Alt Underground theme.",,,300px,,,,Ice,,['Music-Ice biome.mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-32,,,* Frost Moon,,It vaguely resembles a Christmas song but is more upbeat and uses an electric guitar with a heavy distortion applied giving it a metal feel to the track.,,,300px,,,,Frost Moon,,['Music-Frost Moon.mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-72,,,"* Snow biome
-* The Aether",,A calm and relaxing track which shifts between what resembles uplifting trance music and fantasy music.,,,300px,,,,Snow (Otherworldly),,['Music-Arctic (Snow) (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-77,,,* Ice biome,,"It has a ""crystalline"" and rather ominous sound to it.",,,300px,,,,Ice (Otherworldly),,['Music-Ice (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-90,,,* Deerclops,,"Arranged by . It is an upbeat, electronic remix of ""The E.F.S. Of Winter"" from Don't Starve Together. E.F.S. stands for Epic Fight Song.",,,300px,,,,Deerclops,,['Music-Deerclops.mp3'],Music,https://terraria.wiki.gg/api.php,snow_ice,Terraria
-18,,,When the player is in the Sparse Arctic or the Glacial Basin Ice Lake.,1:20,Flowers,,,Subnautica: Below Zero OST,https://subnautica.fandom.com/api.php,snow_ice,,Subnautica,,Titan Holefish
-24,,,When the player approaches the Frozen Leviathan at the Phi Excavation Site.,0:33,I am Relieved It Is Still Frozen,,,Subnautica: Below Zero OST,https://subnautica.fandom.com/api.php,snow_ice,,Subnautica,,I Am Relieved It Is Still Frozen
-35,,,When the player is in the West Arctic.,4:56,Iceberg A,,,Subnautica: Below Zero OST,https://subnautica.fandom.com/api.php,snow_ice,,Subnautica,,Iceberg
-38,,,"When the player is in the Glacial Basin Ice Lake, Purple Vents, or Deep Purple Vents.",2:12,Limestone,,,Subnautica: Below Zero OST,https://subnautica.fandom.com/api.php,snow_ice,,Subnautica,,Limestone
-42,,,When the player is in the Arctic Spires.,1:42,Arctic Spires,,,Subnautica: Below Zero OST,https://subnautica.fandom.com/api.php,snow_ice,,Subnautica,,The Ice Worm
+#,Time,Title,_source_page,_wiki_api,biome_category,game
+7,6:03,Ice Fortress,Wrath of the Lich King – Fall of the Lich King Soundtrack,https://wowpedia.fandom.com/api.php,snow_ice,World of Warcraft
