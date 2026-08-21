@@ -244,7 +244,7 @@ def run_classify(in_csv: str, classified_dir: str):
     print(f"\n총 {len(rows)}행 처리 완료. 결과: {out_dir}/")
 
 
-def run_apply_review(review_csv: str, classified_dir: str):
+def run_apply_review(review_csv: str, classified_dir: str, default_drop: bool = False):
     review_path = Path(review_csv)
     rows = _read_csv_rows(review_path)
     if not rows:
@@ -262,7 +262,10 @@ def run_apply_review(review_csv: str, classified_dir: str):
     for row in rows:
         decision = (row.get("final_category") or "").strip().lower()
         if not decision:
-            still_pending.append(row)
+            if default_drop:
+                dropped += 1
+            else:
+                still_pending.append(row)
         elif decision in ("drop", "skip", "exclude"):
             dropped += 1
         elif decision in CATEGORY_KEYWORDS:
@@ -293,6 +296,13 @@ def main():
     ap.add_argument("--in", dest="in_csv", help="wiki_scraper.py 출력 CSV (기본 분류 모드)")
     ap.add_argument("--apply-review", dest="apply_review", help="사람이 final_category를 채운 review CSV (반영 모드)")
     ap.add_argument("--classified-dir", default="classified", help="카테고리별 CSV를 저장/조회할 디렉터리")
+    ap.add_argument(
+        "--default-drop",
+        action="store_true",
+        help="--apply-review 전용. final_category를 안 채운 행도 review에 남겨두지 않고 "
+        "drop(제외) 처리한다. 실제로 다 판단한 뒤 나머지를 한번에 정리할 때만 켤 것 — "
+        "아직 안 본 행까지 같이 버려질 수 있음.",
+    )
     args = ap.parse_args()
 
     if bool(args.in_csv) == bool(args.apply_review):
@@ -301,7 +311,7 @@ def main():
     if args.in_csv:
         run_classify(args.in_csv, args.classified_dir)
     else:
-        run_apply_review(args.apply_review, args.classified_dir)
+        run_apply_review(args.apply_review, args.classified_dir, args.default_drop)
 
 
 if __name__ == "__main__":

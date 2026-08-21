@@ -4,7 +4,18 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 
-CLASSIFIED_DIR="${1:-$ROOT_DIR/classified}"
+# 사용법: ./review.sh [classified_dir] [--default-drop]
+# --default-drop: final_category를 안 채운 행도 남겨두지 않고 drop 처리.
+#   다 판단 끝났고 나머지는 버려도 될 때만 붙일 것 (아직 안 본 행까지 같이 사라짐).
+CLASSIFIED_DIR="$ROOT_DIR/classified"
+EXTRA_ARGS=()
+for arg in "$@"; do
+  if [ "$arg" = "--default-drop" ]; then
+    EXTRA_ARGS+=(--default-drop)
+  else
+    CLASSIFIED_DIR="$arg"
+  fi
+done
 REVIEW_CSV="$CLASSIFIED_DIR/_review.csv"
 
 if [ ! -f "$REVIEW_CSV" ]; then
@@ -13,4 +24,4 @@ if [ ! -f "$REVIEW_CSV" ]; then
 fi
 
 echo "[review] $REVIEW_CSV 반영 중..."
-python3 "$ROOT_DIR/classify_tracks.py" --apply-review "$REVIEW_CSV" --classified-dir "$CLASSIFIED_DIR"
+python3 "$ROOT_DIR/classify_tracks.py" --apply-review "$REVIEW_CSV" --classified-dir "$CLASSIFIED_DIR" "${EXTRA_ARGS[@]}"
