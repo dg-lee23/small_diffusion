@@ -118,13 +118,19 @@ def _download_direct(url: str, out_path: Path, dry_run: bool) -> Optional[dict]:
     return {"title": final_path.stem, "duration": "", "_local_path": str(final_path)}
 
 
+MAX_SEARCH_RESULT_DURATION_SEC = 600  # ytsearch 폴백에서 받을 최대 길이 (10분)
+SEARCH_CANDIDATES = 5  # 위 길이 조건을 만족하는 첫 결과를 찾기 위해 몇 개까지 볼지
+
+
 def _resolve_source_url(row: dict) -> str:
     ext_links = _parse_list_cell(row.get("_ext_links"))
     if ext_links:
         return ext_links[0]
     game = row.get("game", "")
     title = _guess_title(row)
-    return f"ytsearch1:{game} {title} official soundtrack"
+    # 검색 결과가 하나뿐이면(ytsearch1) 그게 전체 OST 모음집 같은 엉뚱한 영상이어도
+    # 그대로 받아버림. 여러 후보를 보고 download_one()에서 길이 필터로 거른다.
+    return f"ytsearch{SEARCH_CANDIDATES}:{game} {title} official soundtrack"
 
 
 def download_one(
@@ -135,16 +141,26 @@ def download_one(
     cookies_file: str = None,
     extra_yt_dlp_args: list = None,
 ) -> Optional[dict]:
+    is_search = source.startswith("ytsearch")
     cmd = [
         "yt-dlp",
         "-x",
         "--audio-format", "mp3",
         "--audio-quality", "0",
-        "--no-playlist",
         "-o", str(out_path.with_suffix(".%(ext)s")),
         "--print-json",
-        source,
     ]
+    if is_search:
+        # ytsearchN:은 검색 결과 N개짜리 "재생목록"이라 --no-playlist를 주면 안 됨
+        # (그러면 사실상 다시 1개짜리 검색이 되어버림). 대신 길이 필터로 거르고
+        # 조건을 만족하는 첫 곡 하나만 받고 멈춘다.
+        cmd += [
+            "--match-filter", f"duration < {MAX_SEARCH_RESULT_DURATION_SEC}",
+            "--max-downloads", "1",
+        ]
+    else:
+        cmd += ["--no-playlist"]
+    cmd.append(source)
     if cookies_from_browser:
         cmd += ["--cookies-from-browser", cookies_from_browser]
     if cookies_file:
@@ -167,6 +183,8 @@ def download_one(
             return json.loads(line)
         except json.JSONDecodeError:
             continue
+    if is_search:
+        print(f"[!] {MAX_SEARCH_RESULT_DURATION_SEC}초 이내인 검색 결과를 못 찾음: {source}", file=sys.stderr)
     return None
 
 
