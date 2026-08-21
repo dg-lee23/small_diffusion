@@ -34,10 +34,28 @@ if [ ! -f "$IN_CSV" ]; then
   exit 1
 fi
 
+# 유튜브 봇 차단 회피용 쿠키를 매번 손으로 안 넘겨도 되게, ROOT_DIR에 쿠키 파일이
+# 있고 사용자가 이미 --cookies-file/--cookies-from-browser를 직접 안 줬으면 자동으로 붙인다.
+COOKIE_ARGS=()
+HAS_COOKIE_ARG=false
+for arg in "$@"; do
+  case "$arg" in
+    --cookies-file|--cookies-from-browser) HAS_COOKIE_ARG=true ;;
+  esac
+done
+if [ "$HAS_COOKIE_ARG" = false ]; then
+  DEFAULT_COOKIES=$(find "$ROOT_DIR" -maxdepth 1 -iname "*cookies*.txt" 2>/dev/null | head -1)
+  if [ -n "$DEFAULT_COOKIES" ]; then
+    COOKIE_ARGS=(--cookies-file "$DEFAULT_COOKIES")
+    echo "[download] 쿠키 자동 사용: $DEFAULT_COOKIES"
+  fi
+fi
+
 echo "[download] $CATEGORY: $IN_CSV -> $OUT_DIR"
 python3 "$ROOT_DIR/download_tracks.py" \
   --in "$IN_CSV" \
   --out-dir "$OUT_DIR" \
   --metadata-out "$META_OUT" \
   "${WIKI_API_ARGS[@]}" \
+  "${COOKIE_ARGS[@]}" \
   "$@"
