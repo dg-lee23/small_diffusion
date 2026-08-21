@@ -39,6 +39,21 @@ USER_AGENT = "ost-biome-dataset-bot/0.1 (research/personal dataset project)"
 TRACK_TITLE_KEYS = ["Track", "Title", "Name", "Song", "title"]
 
 
+def _read_csv_rows(path) -> list[dict]:
+    """CSV를 읽되 UTF-8이 아니어도 최대한 읽어낸다 (Excel 등에서 편집 후 cp1252로
+    저장되는 경우가 흔함 — classify_tracks.py의 동명 함수와 동일한 로직)."""
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            with open(path, newline="", encoding=encoding) as f:
+                rows = list(csv.DictReader(f))
+            if encoding != "utf-8-sig":
+                print(f"[!] {path}: UTF-8이 아니어서 {encoding}로 읽음 (Excel로 저장했다면 'CSV UTF-8'로 다시 저장 권장)")
+            return rows
+        except UnicodeDecodeError:
+            continue
+    raise UnicodeDecodeError("unknown", b"", 0, 1, f"{path}를 어떤 인코딩으로도 읽지 못함")
+
+
 def _guess_title(row: dict) -> str:
     for key in TRACK_TITLE_KEYS:
         if row.get(key):
@@ -179,8 +194,7 @@ def main():
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    with open(args.in_csv, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+    rows = _read_csv_rows(args.in_csv)
     if args.limit:
         rows = rows[: args.limit]
 
