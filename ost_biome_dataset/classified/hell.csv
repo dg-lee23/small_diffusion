@@ -1,5 +1,19 @@
 #,Area,Compatible biomes,Condition,"Damage<ref name=""plantai""/>",Description,Item,Links,Listen,Name,Projectile,Tile and location requirements,Title,_ext_links,_file_links,_source_page,_wiki_api,biome_category,game
 36,,,* The Underworld,,"A deep and menacing track, with an emphasis on harsh percussion.",,,300px,,,,Hell,,['Music-Underworld.mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
 71,,,* The Underworld,,"Dark, aggressive, and features harpsichord music for a ""haunted house"" feeling.",,,300px,,,,Underworld (Otherworldly),,['Music-Underworld (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
-,"[https://re-logic.bandcamp.com/track/underworld Bandcamp], [https://www.youtube.com/watch?v=jkcuG1cnkaM YouTube]",,,,,The Underworld,400px,,,,,,"['https://re-logic.bandcamp.com/track/underworld', 'https://www.youtube.com/watch?v=jkcuG1cnkaM']",['Music-Underworld.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,hell,Terraria
-,400px,,,,,"The Underworld<ref name=""OtherworldToggle"" />",,,,,,,,['Music-Underworld (Otherworldly).mp3'],Music Boxes,https://terraria.wiki.gg/api.php,hell,Terraria
+10,,,* Underground Corruption,,"This track is a combination of Corruption and Underground tracks, with a depressing and dark tone.",,,300px,,,,Underground Corruption,,['Music-Underground Corruption.mp3'],Music,https://terraria.wiki.gg/api.php,cave_underground,Terraria
+33,,,* Underground Crimson,,A mix of the Underground and Crimson tracks.,,,300px,,,,Underground Crimson,,['Music-Underground Crimson.mp3'],Music,https://terraria.wiki.gg/api.php,cave_underground,Terraria
+74,,,* Underground Corruption,,"Resembles its Otherworldly surface counterpart, but is somewhat more aggressive.",,,300px,,,,Underground Corruption (Otherworldly),,['Music-Underground Corruption (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,cave_underground,Terraria
+76,,,* Underground Crimson,,A brooding and increasingly frantic track.,,,300px,,,,Underground Crimson (Otherworldly),,['Music-Underground Crimson (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,cave_underground,Terraria
+8,,,"* The Corruption (surface)
+* Remix world generation",,Its melody somewhat resembles the Overworld Day track but altered and slowed to sound much darker and more menacing.,,,300px,,,,Corruption,,['Music-Corruption.mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+12,,,* Wall of Flesh,,"It is a very hectic, frantic tune, and gives the feel of a chase, fear and horror, especially at the beginning.",,,300px,,,,Boss 2,,['Music-Boss 2.mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+16,,,* The Crimson (surface),,"An unnerving, dark, and unsettling theme with a faster pace than that of the Corruption. Its main melody comes near the end of the track.",,,300px,,,,Crimson,,['Music-Crimson.mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+73,,,* The Corruption (surface),,"It is a dark, undulating track which features downtempo rock music.",,,300px,,,,Corruption (Otherworldly),,['Music-Corruption (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+75,,,* The Crimson (surface),,"A dark, ambient track which seems to feature some type of contrabass brass instrument for a ""gloomy"" feeling and eventually becomes almost psychedelic-sounding.",,,300px,,,,Crimson (Otherworldly),,['Music-Crimson (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+79,,,"* Blood Moon
+* Graveyard
+* Meteorite
+* Solar Eclipse",,An almost doomsday-like track which features female hymns and what seems like electric guitar.,,,300px,,,,Eerie (Otherworldly),,['Music-Eerie (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria
+87,,,"* The Torch God
+* Wall of Flesh",,It is a dramatic and at times also heroic-sounding track.,,,300px,,,,Wall of Flesh (Otherworldly),,['Music-Wall of Flesh (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,hell,Terraria

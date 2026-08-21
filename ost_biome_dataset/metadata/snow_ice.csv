@@ -1,0 +1,7 @@
+game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
+Terraria,snow_ice,Music,Snow,direct,https://terraria.wiki.gg/images/Music-Snow.mp3?94d434,Snow,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Snow.mp3
+Terraria,snow_ice,Music,Ice,direct,https://terraria.wiki.gg/images/Music-Ice_biome.mp3?5f59bb,Ice,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Ice.mp3
+Terraria,snow_ice,Music,Frost Moon,direct,https://terraria.wiki.gg/images/Music-Frost_Moon.mp3?800e50,Frost Moon,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Frost Moon.mp3
+Terraria,snow_ice,Music,Snow (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Arctic_%28Snow%29_%28Otherworldly%29.mp3?aa462b,Snow Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Snow Otherworldly.mp3
+Terraria,snow_ice,Music,Ice (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Ice_%28Otherworldly%29.mp3?169dff,Ice Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Ice Otherworldly.mp3
+Terraria,snow_ice,Music,Deerclops,direct,https://terraria.wiki.gg/images/Music-Deerclops.mp3?7db829,Deerclops,,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Deerclops.mp3

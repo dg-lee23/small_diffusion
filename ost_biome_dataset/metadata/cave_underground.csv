@@ -1,0 +1,6 @@
+game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
+Terraria,cave_underground,Music,Underground,direct,https://terraria.wiki.gg/images/Music-Underground.mp3?1fc67a,Underground,,/workspaces/small_diffusion/ost_biome_dataset/audio/cave_underground/Underground.mp3
+Terraria,cave_underground,Music,Dungeon,direct,https://terraria.wiki.gg/images/Music-Dungeon.mp3?17be77,Dungeon,,/workspaces/small_diffusion/ost_biome_dataset/audio/cave_underground/Dungeon.mp3
+Terraria,cave_underground,Music,Alt Underground,direct,https://terraria.wiki.gg/images/Music-Alternate_Underground.mp3?1cac86,Alt Underground,,/workspaces/small_diffusion/ost_biome_dataset/audio/cave_underground/Alt Underground.mp3
+Terraria,cave_underground,Music,Underground (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Main_Theme_%28Underground%29_%28Otherworldly%29.mp3?b85690,Underground Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/cave_underground/Underground Otherworldly.mp3
+Terraria,cave_underground,Music,Dungeon (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Dungeon_%28Otherworldly%29.mp3?fa7622,Dungeon Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/cave_underground/Dungeon Otherworldly.mp3

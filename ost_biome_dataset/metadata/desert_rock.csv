@@ -1,0 +1,5 @@
+game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
+Terraria,desert_rock,Music,Desert,direct,https://terraria.wiki.gg/images/Music-Desert.mp3?e2ff6d,Desert,,/workspaces/small_diffusion/ost_biome_dataset/audio/desert_rock/Desert.mp3
+Terraria,desert_rock,Music,Sandstorm,direct,https://terraria.wiki.gg/images/Music-Sandstorm.mp3?e815ef,Sandstorm,,/workspaces/small_diffusion/ost_biome_dataset/audio/desert_rock/Sandstorm.mp3
+Terraria,desert_rock,Music,Underground Desert,direct,https://terraria.wiki.gg/images/Music-Underground_Desert.mp3?adfef0,Underground Desert,,/workspaces/small_diffusion/ost_biome_dataset/audio/desert_rock/Underground Desert.mp3
+Terraria,desert_rock,Music,Desert (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Desert_%28Otherworldly%29.mp3?9d660c,Desert Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/desert_rock/Desert Otherworldly.mp3

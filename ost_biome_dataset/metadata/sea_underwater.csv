@@ -1,0 +1,6 @@
+game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
+Terraria,sea_underwater,Music,Ocean Day,direct,https://terraria.wiki.gg/images/Music-Ocean_Day.mp3?6e3fee,Ocean Day,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Day.mp3
+Terraria,sea_underwater,Music,Ocean Night,direct,https://terraria.wiki.gg/images/Music-Ocean_Night.mp3?a7062d,Ocean Night,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Night.mp3
+Terraria,sea_underwater,Music,Ocean (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Ocean_%28Otherworldly%29.mp3?9796ad,Ocean Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Otherworldly.mp3
+Terraria,sea_underwater,Music,Duke Fishron,direct,https://terraria.wiki.gg/images/Music-Duke_Fishron.mp3?26188c,Duke Fishron,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Duke Fishron.mp3
+Terraria,sea_underwater,Biomes,Ocean,ytdlp,ytsearch1:Terraria Ocean official soundtrack,,,
