@@ -12,6 +12,13 @@
 
 요구사항: yt-dlp가 PATH에 설치되어 있어야 함 (pip install yt-dlp).
 
+여기 정의되지 않은 옵션은 에러 없이 그대로 yt-dlp에 전달된다. 예를 들어 유튜브의
+n-challenge 관련 에러("n challenge solving failed", "The page needs to be reloaded")가
+나면 yt-dlp를 최신으로 업데이트한 뒤(pip install -U yt-dlp) 그래도 안 되면 아래처럼
+클라이언트를 바꿔서 우회할 수 있다:
+    python download_tracks.py --in tracks.csv --out-dir audio/cave_underground \
+        --extractor-args "youtube:player_client=android"
+
 사용 예:
     python download_tracks.py --in tracks.csv --out-dir audio/cave_underground \
         --metadata-out metadata.csv --dry-run
@@ -105,7 +112,14 @@ def _resolve_source_url(row: dict) -> str:
     return f"ytsearch1:{game} {title} official soundtrack"
 
 
-def download_one(source: str, out_path: Path, dry_run: bool, cookies_from_browser: str = None, cookies_file: str = None) -> Optional[dict]:
+def download_one(
+    source: str,
+    out_path: Path,
+    dry_run: bool,
+    cookies_from_browser: str = None,
+    cookies_file: str = None,
+    extra_yt_dlp_args: list = None,
+) -> Optional[dict]:
     cmd = [
         "yt-dlp",
         "-x",
@@ -120,6 +134,8 @@ def download_one(source: str, out_path: Path, dry_run: bool, cookies_from_browse
         cmd += ["--cookies-from-browser", cookies_from_browser]
     if cookies_file:
         cmd += ["--cookies", cookies_file]
+    if extra_yt_dlp_args:
+        cmd += extra_yt_dlp_args
     if dry_run:
         cmd.insert(1, "--simulate")
     try:
@@ -156,7 +172,9 @@ def main():
         "--wiki-api",
         help="CSV에 _wiki_api 컬럼이 없는 경우(예: 구버전 스크래퍼로 만든 CSV)를 위한 폴백 값",
     )
-    args = ap.parse_args()
+    # 여기 정의 안 된 옵션은 에러 내지 않고 그대로 yt-dlp에 전달한다
+    # (예: --extractor-args "youtube:player_client=android" 같은 우회 옵션).
+    args, extra_yt_dlp_args = ap.parse_known_args()
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -197,7 +215,9 @@ def main():
                 print(f"[!] 직접 다운로드 실패: {source}\n{e}", file=sys.stderr)
                 info = None
         else:
-            info = download_one(source, out_path, args.dry_run, args.cookies_from_browser, args.cookies_file)
+            info = download_one(
+                source, out_path, args.dry_run, args.cookies_from_browser, args.cookies_file, extra_yt_dlp_args
+            )
 
         local_path = ""
         if not args.dry_run and info:
