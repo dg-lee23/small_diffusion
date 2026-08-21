@@ -1,2 +1,14 @@
 game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
-World of Warcraft,snow_ice,Wrath of the Lich King – Fall of the Lich King Soundtrack,Ice Fortress,ytdlp,ytsearch1:World of Warcraft Ice Fortress official soundtrack,,,
+MapleStory,snow_ice,Bgm03,Snowy Village,ytdlp,https://www.youtube.com/watch?v=X6X7U5V9Obk,[MapleStory BGM] El Nath: Snowy Village,155,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Snowy Village.mp3
+MapleStory,snow_ice,Bgm19,Snow Drop,ytdlp,https://www.youtube.com/watch?v=531E1H-sdSo,[MapleStory BGM] Rien: Snow Drop,170,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Snow Drop.mp3
+MapleStory,snow_ice,Bgm23,Blizzard Castle,ytdlp,https://www.youtube.com/watch?v=8F100vDwPJg,[MapleStory BGM] Blizzard Castle (KMST 1.2.340),174,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Blizzard Castle.mp3
+MapleStory,snow_ice,Bgm34,Glacier Adventure,ytdlp,https://www.youtube.com/watch?v=BjIJTO2SFAk,[MapleStory BGM] Riena Strait: Glacier Adventure (KMST 1.2.479),124,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Glacier Adventure.mp3
+MapleStory,snow_ice,Bgm34,Sailing,ytdlp,https://www.youtube.com/watch?v=Cejub3b907A,[MapleStory BGM] Riena Strait: Sailing (KMS 1.2.195),132,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Sailing.mp3
+MapleStory,snow_ice,BgmEvent3,When It Snows in Cernium,ytdlp,https://www.youtube.com/watch?v=9-HUOufRkcc,[MapleStory BGM] When It Snows in Cernium,112,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/When It Snows in Cernium.mp3
+MapleStory,snow_ice,Bgm04,Warm Regard,ytdlp,https://www.youtube.com/watch?v=MBmPOY2PA2Q,[MapleStory BGM] El Nath: Warm Regard,168,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Warm Regard.mp3
+MapleStory,snow_ice,Bgm19,Bamboo Gym,ytdlp,https://www.youtube.com/watch?v=9HiJnsISD3s,[MapleStory BGM] Rien: Bamboo Gym,273,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Bamboo Gym.mp3
+MapleStory,snow_ice,Bgm19,Crystal Cave,ytdlp,https://www.youtube.com/watch?v=Wr21LZPVPrw,[MapleStory BGM] Rien: Crystal Cave,142,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Crystal Cave.mp3
+MapleStory,snow_ice,Bgm19,Rien Village,ytdlp,https://www.youtube.com/watch?v=YDfIfL_Fxec,[MapleStory BGM] Rien Village,193,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Rien Village.mp3
+MapleStory,snow_ice,Bgm23,Crimson Tower,ytdlp,https://www.youtube.com/watch?v=KmTlNkXpq-M,[MapleStory BGM] Crimson Tower (KMST 1.2.340),161,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Crimson Tower.mp3
+MapleStory,snow_ice,BgmEvent3,Floral Life -Xmas ver.-,ytdlp,https://www.youtube.com/watch?v=tMCICVxXrVY,[MapleStory BGM] Henesys: Floral Life -Xmas ver.-,103,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Floral Life -Xmas ver-.mp3
+MapleStory,snow_ice,BgmEvent3,Leafre -Xmas ver.-,ytdlp,https://www.youtube.com/watch?v=LgFDYq-gOQI,[MapleStory BGM] Leafre -Xmas ver.-,72,/workspaces/small_diffusion/ost_biome_dataset/audio/snow_ice/Leafre -Xmas ver-.mp3

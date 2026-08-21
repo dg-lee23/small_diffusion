@@ -8,8 +8,8 @@
 ./scripts/download.sh city_machine 
 ./scripts/download.sh cave_underground                             
 ./scripts/download.sh desert_rock
-./scripts/download.sh forest_jungle 
 ./scripts/download.sh hell 
 ./scripts/download.sh sea_underwater
 ./scripts/download.sh snow_ice
 ./scripts/download.sh space 
+# ./scripts/download.sh forest_jungle 

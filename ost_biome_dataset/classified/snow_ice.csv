@@ -1,7 +1,14 @@
-#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2,Location,Mark,Artist,Year,_ext_links
-,,Snowy Village,Bgm03,,snow_ice,MapleStory,,,,El Nath,ElNath,CODASOUND,2004,['https://www.youtube.com/watch?v=X6X7U5V9Obk']
-,,Snow Drop,Bgm19,,snow_ice,MapleStory,,,,Rien Training Field,Rien,StudioEIM,2009,['https://www.youtube.com/watch?v=531E1H-sdSo']
-,,Blizzard Castle,Bgm23,,snow_ice,MapleStory,,,,El Nath: Lion King's Castle,LionCastle,StudioEIM,2010,['https://www.youtube.com/watch?v=8F100vDwPJg']
-,,Glacier Adventure,Bgm34,,snow_ice,MapleStory,,,,Riena Strait,glacierExplorer,StudioEIM,2013,['https://www.youtube.com/watch?v=BjIJTO2SFAk']
-,,Sailing,Bgm34,,snow_ice,MapleStory,,,,Sailing on the Riena Strait,glacierExplorer,StudioEIM,2013,['https://www.youtube.com/watch?v=Cejub3b907A']
-,,When It Snows in Cernium,BgmEvent3,,snow_ice,MapleStory,,,,2023 Christmas - Cernium,Cernium,ASTERIA,2023,['https://www.youtube.com/watch?v=9-HUOufRkcc']
+#,Time,Title,_source_page,_wiki_api,biome_category,game,Name,Played in,col2,Location,Mark,Artist,Year,_ext_links,
+,,Snowy Village,Bgm03,,snow_ice,MapleStory,,,,El Nath,ElNath,CODASOUND,2004,['https://www.youtube.com/watch?v=X6X7U5V9Obk'],
+,,Snow Drop,Bgm19,,snow_ice,MapleStory,,,,Rien Training Field,Rien,StudioEIM,2009,['https://www.youtube.com/watch?v=531E1H-sdSo'],
+,,Blizzard Castle,Bgm23,,snow_ice,MapleStory,,,,El Nath: Lion King's Castle,LionCastle,StudioEIM,2010,['https://www.youtube.com/watch?v=8F100vDwPJg'],
+,,Glacier Adventure,Bgm34,,snow_ice,MapleStory,,,,Riena Strait,glacierExplorer,StudioEIM,2013,['https://www.youtube.com/watch?v=BjIJTO2SFAk'],
+,,Sailing,Bgm34,,snow_ice,MapleStory,,,,Sailing on the Riena Strait,glacierExplorer,StudioEIM,2013,['https://www.youtube.com/watch?v=Cejub3b907A'],
+,,When It Snows in Cernium,BgmEvent3,,snow_ice,MapleStory,,,,2023 Christmas - Cernium,Cernium,ASTERIA,2023,['https://www.youtube.com/watch?v=9-HUOufRkcc'],
+,,Warm Regard,Bgm04,,snow_ice,MapleStory,,,,El Nath field,ElNath,CODASOUND,2004,['https://www.youtube.com/watch?v=MBmPOY2PA2Q'],
+,,Bamboo Gym,Bgm19,,snow_ice,MapleStory,,,,Rien: Aran Bamboo Gym,Rien,StudioEIM,2009,['https://www.youtube.com/watch?v=9HiJnsISD3s'],
+,,Crystal Cave,Bgm19,,snow_ice,MapleStory,,,,Rien: Mirror Cave,SnowDragon,StudioEIM,2009,['https://www.youtube.com/watch?v=Wr21LZPVPrw'],
+,,Rien Village,Bgm19,,snow_ice,MapleStory,,,,Rien,Rien,StudioEIM,2009,['https://www.youtube.com/watch?v=YDfIfL_Fxec'],
+,,Crimson Tower,Bgm23,,snow_ice,MapleStory,,,,El Nath: Lion King's Castle - Rose Garden,LionCastle,StudioEIM,2010,['https://www.youtube.com/watch?v=KmTlNkXpq-M'],
+,,Floral Life -Xmas ver.-,BgmEvent3,,snow_ice,MapleStory,,,,2022 Christmas - Henesys,Henesys,ASTERIA,2022,['https://www.youtube.com/watch?v=tMCICVxXrVY'],
+,,Leafre -Xmas ver.-,BgmEvent3,,snow_ice,MapleStory,,,,2022 Christmas - Leafre,Leafre,ASTERIA,2022,['https://www.youtube.com/watch?v=LgFDYq-gOQI'],

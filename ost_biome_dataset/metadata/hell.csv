@@ -1,3 +1,3 @@
 game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
-World of Warcraft,hell,Legion Soundtrack,Demon Hunter,ytdlp,ytsearch1:World of Warcraft Demon Hunter official soundtrack,,,
-World of Warcraft,hell,The Burning Crusade Soundtrack,Hellfire,ytdlp,ytsearch1:World of Warcraft Hellfire official soundtrack,,,
+MapleStory,hell,Bgm06,Welcome to Hell,ytdlp,https://www.youtube.com/watch?v=3EJFx4emHyk,[MapleStory BGM] Zakum: Welcome to Hell,179,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Welcome to Hell.mp3
+MapleStory,hell,Bgm28,The Final War (Original),ytdlp,https://www.youtube.com/watch?v=BOnEdZbf3ms,[MapleStory BGM] The Final War (KMST 1.2.444) (Original Version),127,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/The Final War Original.mp3
