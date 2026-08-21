@@ -1,13 +1,3 @@
 game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
-Terraria,sea_underwater,Music,Ocean Day,direct,https://terraria.wiki.gg/images/Music-Ocean_Day.mp3?6e3fee,Ocean Day,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Day.mp3
-Terraria,sea_underwater,Music,Ocean Night,direct,https://terraria.wiki.gg/images/Music-Ocean_Night.mp3?a7062d,Ocean Night,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Night.mp3
-Terraria,sea_underwater,Music,Ocean (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Ocean_%28Otherworldly%29.mp3?9796ad,Ocean Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Ocean Otherworldly.mp3
-Terraria,sea_underwater,Music,Duke Fishron,direct,https://terraria.wiki.gg/images/Music-Duke_Fishron.mp3?26188c,Duke Fishron,,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Duke Fishron.mp3
-,,,Subnautica,ytdlp,Alterra Science,,,
-,,,Subnautica,ytdlp,Arc Lights,,,
-,,,Subnautica,ytdlp,Blood Crawlers,,,
-,,,Subnautica,ytdlp,Islands Beneath the Sea,,,
-,,,Subnautica,ytdlp,Cycle of Life,,,
-,,,Subnautica,ytdlp,Lost River,,,
-,,,Subnautica,ytdlp,Shadow of the Reefback,,,
-,sea_underwater,cave_underground|sea_underwater,Subnautica,ytdlp,A Tendency to Float,,,
+World of Warcraft,sea_underwater,World of Warcraft Soundtrack,Seasons of War,ytdlp,ytsearch1:World of Warcraft Seasons of War official soundtrack,Official World of Warcraft Soundtrack - (07) Seasons of War,179,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Seasons of War.mp3
+World of Warcraft,sea_underwater,Shadowlands Soundtrack,Seat of the Primus,ytdlp,ytsearch1:World of Warcraft Seat of the Primus official soundtrack,10. Seat of the Primus - World of Warcraft: Shadowlands Original Soundtrack,321,/workspaces/small_diffusion/ost_biome_dataset/audio/sea_underwater/Seat of the Primus.mp3

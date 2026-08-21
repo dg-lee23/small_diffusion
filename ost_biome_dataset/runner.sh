@@ -5,8 +5,8 @@
 #   -> classified/_review.csv 열어서 final_category 채우기
 ./scripts/review.sh                                                # review 반영
 
-./scripts/download.sh cave_underground                             
 ./scripts/download.sh city_machine 
+./scripts/download.sh cave_underground                             
 ./scripts/download.sh desert_rock
 ./scripts/download.sh forest_jungle 
 ./scripts/download.sh hell 

@@ -1,16 +1,3 @@
 game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
-Terraria,hell,Music,Hell,direct,https://terraria.wiki.gg/images/Music-Underworld.mp3?bc6343,Hell,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Hell.mp3
-Terraria,hell,Music,Underworld (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Underworld_%28Otherworldly%29.mp3?2eb0bb,Underworld Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Underworld Otherworldly.mp3
-Terraria,cave_underground,Music,Underground Corruption,direct,https://terraria.wiki.gg/images/Music-Underground_Corruption.mp3?2a0fae,Underground Corruption,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Underground Corruption.mp3
-Terraria,cave_underground,Music,Underground Crimson,direct,https://terraria.wiki.gg/images/Music-Underground_Crimson.mp3?6da8e3,Underground Crimson,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Underground Crimson.mp3
-Terraria,cave_underground,Music,Underground Corruption (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Underground_Corruption_%28Otherworldly%29.mp3?c3d358,Underground Corruption Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Underground Corruption Otherworldly.mp3
-Terraria,cave_underground,Music,Underground Crimson (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Underground_Crimson_%28Otherworldly%29.mp3?c7e0b6,Underground Crimson Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Underground Crimson Otherworldly.mp3
-Terraria,hell,Music,Corruption,direct,https://terraria.wiki.gg/images/Music-Corruption.mp3?48145e,Corruption,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Corruption.mp3
-Terraria,hell,Music,Boss 2,direct,https://terraria.wiki.gg/images/Music-Boss_2.mp3?d6e7b3,Boss 2,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Boss 2.mp3
-Terraria,hell,Music,Crimson,direct,https://terraria.wiki.gg/images/Music-Crimson.mp3?3e0c6b,Crimson,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Crimson.mp3
-Terraria,hell,Music,Corruption (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Corruption_%28Otherworldly%29.mp3?768a6f,Corruption Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Corruption Otherworldly.mp3
-Terraria,hell,Music,Crimson (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Crimson_%28Otherworldly%29.mp3?3e16d3,Crimson Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Crimson Otherworldly.mp3
-Terraria,hell,Music,Eerie (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Eerie_%28Otherworldly%29.mp3?6899c8,Eerie Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Eerie Otherworldly.mp3
-Terraria,hell,Music,Wall of Flesh (Otherworldly),direct,https://terraria.wiki.gg/images/Music-Wall_of_Flesh_%28Otherworldly%29.mp3?d63fa9,Wall of Flesh Otherworldly,,/workspaces/small_diffusion/ost_biome_dataset/audio/hell/Wall of Flesh Otherworldly.mp3
-,,,Subnautica,ytdlp,Ahead Slow,,,
-,,,Subnautica,ytdlp,Bring a Medpack,,,
+World of Warcraft,hell,Legion Soundtrack,Demon Hunter,ytdlp,ytsearch1:World of Warcraft Demon Hunter official soundtrack,,,
+World of Warcraft,hell,The Burning Crusade Soundtrack,Hellfire,ytdlp,ytsearch1:World of Warcraft Hellfire official soundtrack,,,

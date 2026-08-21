@@ -1,4 +1,4 @@
 game,biome_category,source_page,track_title,source_kind,source,resolved_title,duration_sec,local_path
-World of Warcraft,city_machine,World of Warcraft Soundtrack,Undercity,ytdlp,ytsearch1:World of Warcraft Undercity official soundtrack,,,
-World of Warcraft,city_machine,The Burning Crusade Soundtrack,Silvermoon City,ytdlp,ytsearch1:World of Warcraft Silvermoon City official soundtrack,,,
+World of Warcraft,city_machine,World of Warcraft Soundtrack,Undercity,ytdlp,ytsearch1:World of Warcraft Undercity official soundtrack,Undercity - Music & Ambience - World of Warcraft,3600,/workspaces/small_diffusion/ost_biome_dataset/audio/city_machine/Undercity.mp3
+World of Warcraft,city_machine,The Burning Crusade Soundtrack,Silvermoon City,ytdlp,ytsearch1:World of Warcraft Silvermoon City official soundtrack,Silvermoon City - Music of WoW: Midnight,3618,/workspaces/small_diffusion/ost_biome_dataset/audio/city_machine/Silvermoon City.mp3
 World of Warcraft,city_machine,Shadowlands Soundtrack,The Undying City,ytdlp,ytsearch1:World of Warcraft The Undying City official soundtrack,,,
