@@ -141,16 +141,45 @@ def _load_existing_keys(path: Path) -> set:
 
 
 def _append_rows(path: Path, rows: list[dict], fieldnames: list[str]):
+    """rows를 path에 append한다.
+
+    서로 다른 위키(게임)를 스크랩하면 원본 표의 컬럼 구성 자체가 다르다
+    (예: Terraria는 Condition/Title/Description, Subnautica는 Coordinates/
+    Location/Played when/Track Name 등). 기존 파일이 이미 다른 컬럼 구성으로
+    만들어져 있는데 그냥 append하면, csv.DictWriter는 위치 기반이 아니라
+    fieldnames 기준으로 쓰지만 실제 파일에 이미 적힌 헤더 줄은 안 바뀌므로
+    "다른 헤더 밑에 다른 컬럼 값이 깔리는" 심각한 데이터 손상이 생긴다
+    (실제로 Subnautica 트랙 제목이 Terraria 헤더의 다른 컬럼 자리에 들어가
+    game/title이 뒤섞이는 사고가 있었음). 그래서 기존 헤더에 없는 새 컬럼이
+    있으면 파일 전체를 "기존 헤더 + 새 컬럼" 합집합으로 재작성한다.
+    """
     if not rows:
         return
-    is_new = not path.exists()
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if is_new:
+
+    if not path.exists():
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
+            for r in rows:
+                writer.writerow({k: r.get(k, "") for k in fieldnames})
+        return
+
+    existing_rows = _read_csv_rows(path)
+    existing_header = list(existing_rows[0].keys()) if existing_rows else []
+    if not existing_header:
+        with open(path, newline="", encoding="utf-8") as f:
+            existing_header = next(csv.reader(f), [])
+
+    merged_header = existing_header + [f for f in fieldnames if f not in existing_header]
+
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=merged_header)
+        writer.writeheader()
+        for r in existing_rows:
+            writer.writerow({k: r.get(k, "") for k in merged_header})
         for r in rows:
-            writer.writerow({k: r.get(k, "") for k in fieldnames})
+            writer.writerow({k: r.get(k, "") for k in merged_header})
 
 
 def run_classify(in_csv: str, classified_dir: str):
@@ -191,7 +220,14 @@ def run_classify(in_csv: str, classified_dir: str):
             review_row["final_category"] = ""
             review_rows.append(review_row)
 
-    orig_fields = list(rows[0].keys())
+    # rows[0]만 보면 같은 배치 안에서도 행마다 컬럼이 다를 때(예: 검색으로 여러
+    # 위키 문서를 긁어와 문서마다 표 구성이 다른 경우) 일부 컬럼을 놓칠 수 있어
+    # 전체 행의 컬럼을 합집합으로 모은다.
+    orig_fields = []
+    for r in rows:
+        for k in r.keys():
+            if k not in orig_fields:
+                orig_fields.append(k)
     for cat, cat_rows in by_category.items():
         if cat_rows:
             _append_rows(out_dir / f"{cat}.csv", cat_rows, orig_fields)
