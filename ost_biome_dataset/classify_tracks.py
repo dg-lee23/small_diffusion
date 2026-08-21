@@ -114,11 +114,30 @@ def _dedup_key(row: dict) -> tuple:
     return (game, "title", _guess_title(row))
 
 
+def _read_csv_rows(path) -> list[dict]:
+    """CSV를 읽되 UTF-8이 아니어도 최대한 읽어낸다.
+
+    사람이 Excel 등에서 review CSV를 편집하고 저장하면 "CSV UTF-8"이 아니라
+    시스템 기본 인코딩(Windows면 보통 cp1252)으로 저장되는 경우가 흔해서,
+    악센트 문자 등이 들어간 트랙명에서 UnicodeDecodeError가 난다. utf-8이
+    안 되면 cp1252, 그것도 안 되면 latin-1(모든 바이트를 항상 읽어낼 수 있음)
+    순으로 재시도한다."""
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            with open(path, newline="", encoding=encoding) as f:
+                rows = list(csv.DictReader(f))
+            if encoding != "utf-8-sig":
+                print(f"[!] {path}: UTF-8이 아니어서 {encoding}로 읽음 (Excel로 저장했다면 'CSV UTF-8'로 다시 저장 권장)")
+            return rows
+        except UnicodeDecodeError:
+            continue
+    raise UnicodeDecodeError("unknown", b"", 0, 1, f"{path}를 어떤 인코딩으로도 읽지 못함")
+
+
 def _load_existing_keys(path: Path) -> set:
     if not path.exists():
         return set()
-    with open(path, newline="", encoding="utf-8") as f:
-        return {_dedup_key(r) for r in csv.DictReader(f)}
+    return {_dedup_key(r) for r in _read_csv_rows(path)}
 
 
 def _append_rows(path: Path, rows: list[dict], fieldnames: list[str]):
@@ -135,8 +154,7 @@ def _append_rows(path: Path, rows: list[dict], fieldnames: list[str]):
 
 
 def run_classify(in_csv: str, classified_dir: str):
-    with open(in_csv, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+    rows = _read_csv_rows(in_csv)
     if not rows:
         print("[!] 입력 CSV가 비어있음")
         return
@@ -192,8 +210,7 @@ def run_classify(in_csv: str, classified_dir: str):
 
 def run_apply_review(review_csv: str, classified_dir: str):
     review_path = Path(review_csv)
-    with open(review_path, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+    rows = _read_csv_rows(review_path)
     if not rows:
         print("[!] review CSV가 비어있음")
         return
