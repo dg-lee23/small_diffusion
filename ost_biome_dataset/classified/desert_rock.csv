@@ -1,18 +1,7 @@
 #,Area,Compatible biomes,Condition,"Damage<ref name=""plantai""/>",Description,Item,Links,Listen,Name,Projectile,Tile and location requirements,Title,_ext_links,_file_links,_source_page,_wiki_api,biome_category,game
 21,,,* Desert,,"It is a simple, quiet theme inspired by ancient Egyptian music as commonly portrayed in other video games and films.",,,300px,,,,Desert,,['Music-Desert.mp3'],Music,https://terraria.wiki.gg/api.php,desert_rock,Terraria
 40,,,* Sandstorm,,A tense theme that uses a synth to simulate wind (along with actual wind sounds) as well as a sitar to give a sort of Egyptian desert feeling. Some parts of Boss 5 and The Towers can be heard.,,,300px,,,,Sandstorm,,['Music-Sandstorm.mp3'],Music,https://terraria.wiki.gg/api.php,desert_rock,Terraria
-,[https://www.youtube.com/watch?v=QuybWdpabu8 YouTube],,,,,Desert,400px,,,,,,['https://www.youtube.com/watch?v=QuybWdpabu8'],['Music-Desert.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,desert_rock,Terraria
-,[https://www.youtube.com/watch?v=izbvhGAzmzw YouTube],,,,,During a Sandstorm in a Desert,400px,,,,,,['https://www.youtube.com/watch?v=izbvhGAzmzw'],['Music-Sandstorm.mp3'],Music Boxes,https://terraria.wiki.gg/api.php,desert_rock,Terraria
-,,All,,,,,,,Desert,,"At least 1,500 of the following (300 for Skyblock):
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-*",,,,Biomes,https://terraria.wiki.gg/api.php,desert_rock,Terraria
+61,,,* Underground Desert,,"It begins as a slow, mysterious theme featuring strings and low tones, before it transitions into a rock-style theme, with guitars and heavy drums, similar to the Plantera track.",,,300px,,,,Underground Desert,,['Music-Underground Desert.mp3'],Music,https://terraria.wiki.gg/api.php,desert_rock,Terraria
+66,,,"* Desert
+* Sandstorm
+* Underground Desert",,"It begins with dobro (or similarly sounding instrument) for a Wild West feeling, along with occasional heartbeats. It continues with Irish flute for a fantasy feeling, and ends with subtle female vocals.",,,300px,,,,Desert (Otherworldly),,['Music-Desert (Otherworldly).mp3'],Music,https://terraria.wiki.gg/api.php,desert_rock,Terraria
