@@ -32,18 +32,29 @@ def _api_get(wiki_api: str, params: dict) -> dict:
     return resp.json()
 
 
-def search_music_pages(wiki_api: str, query: str = "Music OR Soundtrack OR OST", limit: int = 10) -> list[str]:
-    """게임 위키에서 음악/사운드트랙 관련 문서 제목 후보를 검색한다."""
-    data = _api_get(
-        wiki_api,
-        {
-            "action": "query",
-            "list": "search",
-            "srsearch": query,
-            "srlimit": limit,
-        },
-    )
-    return [hit["title"] for hit in data.get("query", {}).get("search", [])]
+def search_music_pages(wiki_api: str, query: str = "Music OR Soundtrack OR OST", limit: int = 50) -> list[str]:
+    """게임 위키에서 음악/사운드트랙 관련 문서 제목 후보를 검색한다.
+
+    Terraria/Subnautica처럼 문서 하나에 다 몰려있는 위키는 상관없지만, 원신처럼
+    지역별로 OST 문서가 여러 개 흩어진 큰 위키는 결과가 limit개를 넘을 수 있어서
+    (MediaWiki가 한 번에 최대 500개까지 주므로) 필요하면 이어서(sroffset) 계속
+    요청한다."""
+    titles: list[str] = []
+    params = {
+        "action": "query",
+        "list": "search",
+        "srsearch": query,
+        "srlimit": min(limit, 500),
+    }
+    while True:
+        data = _api_get(wiki_api, params)
+        hits = data.get("query", {}).get("search", [])
+        titles.extend(hit["title"] for hit in hits)
+        sroffset = data.get("continue", {}).get("sroffset")
+        if sroffset is None or len(titles) >= limit:
+            break
+        params["sroffset"] = sroffset
+    return titles[:limit]
 
 
 def get_wikitext(wiki_api: str, title: str) -> Optional[str]:
@@ -147,11 +158,19 @@ def main():
         "(위키 한 문서에 여러 바이옴 트랙이 섞여 나오는 경우가 많아서).",
     )
     ap.add_argument("--page-title", help="문서 제목을 알고 있으면 검색을 건너뛰고 바로 사용")
+    ap.add_argument(
+        "--search-limit",
+        type=int,
+        default=50,
+        help="검색으로 찾을 음악 관련 문서 수 상한 (기본 50). 원신처럼 OST 문서가 "
+        "지역별로 여러 개 흩어진 큰 위키는 늘려서 시도해볼 것 (MediaWiki 1회 요청 "
+        "상한은 500).",
+    )
     ap.add_argument("--out", default="tracks.csv")
     ap.add_argument("--dry-run", action="store_true", help="CSV로 저장하지 않고 콘솔에 미리보기만 출력")
     args = ap.parse_args()
 
-    titles = [args.page_title] if args.page_title else search_music_pages(args.wiki_api)
+    titles = [args.page_title] if args.page_title else search_music_pages(args.wiki_api, limit=args.search_limit)
     if not titles:
         print(f"[!] '{args.game}' 위키에서 음악 관련 문서를 찾지 못함 ({args.wiki_api})", file=sys.stderr)
         sys.exit(1)
