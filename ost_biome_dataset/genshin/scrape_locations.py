@@ -1,19 +1,31 @@
 """Genshin Impact 전용: 트랙별 재생 위치(리프 로케이션)를 추출한다.
 
-실제 구조(사용자가 보내준 원본 위키텍스트로 확인함): "Soundtrack/List" 페이지는
-트랙을 직접 나열하지 않고 {{Soundtracks by Category Table|Soundtracks|...}}
-템플릿으로 "Category:Soundtracks" 분류에 속한 문서 목록을 동적으로 렌더링만 한다.
-즉 실제 트랙별 "Open-World Locations" 트리는 각 트랙의 "개별 문서"에 있다.
+실제 구조(사용자가 보내준 실제 트랙 문서 위키텍스트로 확인함 — "A Day in Mondstadt"):
+불릿 트리가 아니라 {{Soundtrack Usage}} 템플릿의 location 파라미터에 지역명과
+시간대가 "//"로 붙은 단순 문자열로 들어있다. 예:
+    {{Soundtrack Usage
+    |quest    = City of Freedom//cutscene
+    |location = Mondstadt City//day
+    |eventgameplay = ...
+    |teapot   = 4
+    }}
+"Mondstadt City//day"에서 앞부분(지역명)만 리프 위치로 쓰고, 뒷부분(day/night 등
+시간대)은 버린다. (사용자가 브라우저에서 본 "트리"는 위키가 렌더링할 때 상위
+지역 계층을 자동으로 붙여 보여준 것으로 보이고, 원본 위키텍스트 자체엔 계층이 없다.)
 
-그래서 이 스크립트는:
+오디오 링크도 페이지 전체에서 URL을 긁으면 각주/참고링크(트위터, NetEase 등)까지
+섞여 들어가므로, {{Soundtrack Infobox}} 템플릿의 youtube_id 파라미터에서 직접
+정확한 유튜브 링크를 만든다. (이 위키는 공식 음반이라 [[File:...]] 오디오 파일을
+직접 호스팅하지 않는 것으로 보임 — Terraria/MapleStory와 다름.)
+
+이 스크립트는:
     1. MediaWiki API로 "Category:Soundtracks" 분류 멤버(=트랙 문서 제목) 목록을
        가져옴. "Category:Unreleased Soundtracks" 멤버는 기본적으로 제외 —
        Soundtrack/List 페이지의 "Released Soundtracks" 절과 동일한 필터.
-    2. 트랙 문서마다 위키텍스트를 가져와 "Open-World Locations" 문구 다음에 나오는
-       중첩 위키 불릿 리스트(*, **, ***...)에서 리프 위치를 추출한다. "리프 노드"는
-       바로 다음 줄이 더 깊은 들여쓰기가 아닌 마지막 노드로 판정한다 — 이 부분은
-       (다른 페이지 구조였을 때 짠) 원래 가정 그대로라 검증이 더 필요할 수 있다.
-       --dump-sample-title로 트랙 하나의 원본 위키텍스트를 저장해 확인 가능.
+       (참고: 이 분류엔 실제 탐험용 배경음악 외에 전투 테마/캐릭터 데모/스토리
+       씬/프로모션 영상 음악도 섞여 있고, 그런 트랙은 애초에 location이 없어서
+       정상적으로 건너뛰어진다 — 버그 아님.)
+    2. 트랙 문서마다 위키텍스트를 가져와 위 template 파라미터들을 추출.
 
 트랙 수가 많아 문서를 하나씩 가져오는 데 시간이 걸린다. --out 파일이 이미 있으면
 거기 있는 Title은 재조회하지 않아서(캐싱) 중간에 끊겨도 이어서 할 수 있다.
@@ -24,14 +36,13 @@
 
 사용 예:
     # 먼저 트랙 하나로 구조 확인
-    python scrape_locations.py --limit 5 --dry-run --dump-sample-title
+    python scrape_locations.py --dump-sample-title "A Day in Mondstadt"
     # 본실행
     python scrape_locations.py --out genshin_raw/track_locations.csv
 """
 
 import argparse
 import csv
-import os
 import re
 import sys
 import time
@@ -76,47 +87,110 @@ def get_category_members(wiki_api: str, category: str, limit: int = 5000) -> lis
     return titles[:limit]
 
 
-_BULLET_LINE = re.compile(r"^(\*+)\s*(.*)$")
 _WIKILINK = re.compile(r"\[\[(?:[^\|\]]*\|)?([^\]]+)\]\]")
-_FILELINK = re.compile(r"\[\[File:([^\|\]]+)")
-_EXTLINK = re.compile(r"\[(https?://\S+)\s*([^\]]*)\]")
+
+
+def find_template_call(wikitext: str, template_name: str) -> str | None:
+    """{{template_name ... }} 전체 호출부(중첩 {{}} 포함)를 텍스트로 찾아 반환."""
+    m = re.search(r"\{\{\s*" + re.escape(template_name) + r"\s*[\|\n}]", wikitext, re.IGNORECASE)
+    if not m:
+        return None
+    start = m.start()
+    depth = 0
+    i = start
+    n = len(wikitext)
+    while i < n - 1:
+        two = wikitext[i : i + 2]
+        if two == "{{":
+            depth += 1
+            i += 2
+            continue
+        if two == "}}":
+            depth -= 1
+            i += 2
+            if depth == 0:
+                return wikitext[start:i]
+            continue
+        i += 1
+    return None
+
+
+def _split_top_level_pipe(text: str) -> list[str]:
+    """중첩된 {{...}}/[[...]] 안의 |는 무시하고 최상위 |로만 나눈다."""
+    parts, buf, depth, i, n = [], [], 0, 0, len(text)
+    while i < n:
+        two = text[i : i + 2]
+        if two in ("{{", "[["):
+            depth += 1
+            buf.append(two)
+            i += 2
+            continue
+        if two in ("}}", "]]"):
+            depth = max(0, depth - 1)
+            buf.append(two)
+            i += 2
+            continue
+        if text[i] == "|" and depth == 0:
+            parts.append("".join(buf))
+            buf = []
+            i += 1
+            continue
+        buf.append(text[i])
+        i += 1
+    parts.append("".join(buf))
+    return parts
+
+
+def parse_template_params(template_call_text: str) -> dict[str, str]:
+    """{{Name|k1=v1|k2=v2}}(멀티라인 가능)에서 파라미터 dict를 만든다."""
+    inner = template_call_text.strip()
+    if inner.startswith("{{") and inner.endswith("}}"):
+        inner = inner[2:-2]
+    parts = _split_top_level_pipe(inner)
+    params = {}
+    for part in parts[1:]:  # parts[0]은 템플릿 이름
+        if "=" in part:
+            k, v = part.split("=", 1)
+            params[k.strip()] = v.strip()
+    return params
+
+
+_TIME_WORDS = {"day", "night", "dawn", "dusk", "morning", "evening", "afternoon"}
 
 
 def extract_leaf_locations(wikitext: str) -> list[str]:
-    """"Open-World Locations" 아래 중첩 불릿 리스트에서 리프 노드 이름들을 추출."""
-    idx = wikitext.find("Open-World Locations")
-    if idx == -1:
+    """{{Soundtrack Usage}}의 location 파라미터에서 리프 위치를 뽑는다.
+    "AreaName//day"처럼 //로 시간대가 붙어있으면 떼고 지역명만 쓴다. 시간대로
+    보이지 않는 다른 구분이 있으면(여러 지역일 수 있음) 전부 별개 리프로 반환해서
+    main()이 "여러 개"로 판단해 건너뛰게 한다."""
+    call = find_template_call(wikitext, "Soundtrack Usage")
+    if not call:
         return []
-    after = wikitext[idx:]
-    lines = after.splitlines()[1:]
-    bullet_lines = []
-    for line in lines:
-        stripped = line.strip()
-        if _BULLET_LINE.match(stripped):
-            bullet_lines.append(stripped)
-        elif bullet_lines:
-            break  # 불릿 블록이 끝남
-    parsed = []
-    for line in bullet_lines:
-        m = _BULLET_LINE.match(line)
-        depth = len(m.group(1))
-        rest = m.group(2)
-        link_m = _WIKILINK.search(rest)
-        name = link_m.group(1) if link_m else rest.strip()
-        if name:
-            parsed.append((depth, name))
-    leaves = []
-    for i, (depth, name) in enumerate(parsed):
-        next_depth = parsed[i + 1][0] if i + 1 < len(parsed) else 0
-        if next_depth <= depth:
-            leaves.append(name)
-    return leaves
+    params = parse_template_params(call)
+    loc = params.get("location", "").strip()
+    loc = _WIKILINK.sub(r"\1", loc)
+    if not loc:
+        return []
+    parts = [p.strip() for p in loc.split("//") if p.strip()]
+    if not parts:
+        return []
+    if len(parts) == 1:
+        return [parts[0]]
+    if len(parts) == 2 and parts[1].lower() in _TIME_WORDS:
+        return [parts[0]]
+    return parts
 
 
-def extract_ext_and_file_links(wikitext: str) -> tuple[list[str], list[str]]:
-    file_links = _FILELINK.findall(wikitext)
-    ext_links = [m.group(1) for m in _EXTLINK.finditer(wikitext)]
-    return file_links, ext_links
+def extract_audio_link(wikitext: str) -> list[str]:
+    """{{Soundtrack Infobox}}의 youtube_id로 정확한 유튜브 링크를 만든다."""
+    call = find_template_call(wikitext, "Soundtrack Infobox")
+    if not call:
+        return []
+    params = parse_template_params(call)
+    yt = params.get("youtube_id", "").strip()
+    if not yt:
+        return []
+    return [f"https://www.youtube.com/watch?v={yt}"]
 
 
 def main():
@@ -192,7 +266,7 @@ def main():
             skipped_none += 1
             continue
         leaves = extract_leaf_locations(wikitext)
-        file_links, ext_links = extract_ext_and_file_links(wikitext)
+        ext_links = extract_audio_link(wikitext)
         if len(leaves) == 0:
             skipped_none += 1
             status = "위치 정보 없음"
@@ -205,7 +279,7 @@ def main():
                 {
                     "Title": title,
                     "LeafLocation": leaves[0],
-                    "_file_links": str(file_links),
+                    "_file_links": "[]",
                     "_ext_links": str(ext_links),
                     "_source_page": title,
                     "_wiki_api": args.wiki_api,
