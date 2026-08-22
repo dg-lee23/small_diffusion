@@ -130,10 +130,26 @@ def main():
     )
     ap.add_argument("--out", default="genshin_raw/track_locations.csv")
     ap.add_argument("--limit", type=int, default=5000, help="테스트용: 트랙 문서 조회 개수 상한")
-    ap.add_argument("--dump-sample-title", action="store_true", help="첫 트랙 하나의 원본 위키텍스트를 콘솔에 출력하고 종료 (구조 확인용)")
+    ap.add_argument(
+        "--dump-sample-title",
+        nargs="?",
+        const="__first__",
+        default=None,
+        help="트랙 하나의 원본 위키텍스트를 콘솔에 출력하고 종료 (구조 확인용). "
+        "값 없이 쓰면 카테고리의 첫 멤버, 특정 제목을 주면 그 문서를 바로 가져옴 "
+        "(카테고리 멤버 목록 조회를 건너뛰므로 훨씬 빠름). "
+        '예: --dump-sample-title "A Day in Mondstadt"',
+    )
     ap.add_argument("--game", default="Genshin Impact")
     ap.add_argument("--dry-run", action="store_true", help="CSV로 저장하지 않고 콘솔에 미리보기만 출력")
     args = ap.parse_args()
+
+    if args.dump_sample_title and args.dump_sample_title != "__first__":
+        sample = args.dump_sample_title
+        wikitext = get_wikitext(args.wiki_api, sample)
+        print(f"=== '{sample}' 원본 위키텍스트 ===")
+        print(wikitext if wikitext is not None else "[!] 문서를 못 찾음")
+        return
 
     titles = get_category_members(args.wiki_api, args.category, limit=args.limit)
     print(f"[scrape] Category:{args.category} 멤버 {len(titles)}개")
@@ -148,7 +164,7 @@ def main():
         print(f"[!] Category:{args.category}에서 트랙을 못 찾음", file=sys.stderr)
         sys.exit(1)
 
-    if args.dump_sample_title:
+    if args.dump_sample_title == "__first__":
         sample = titles[0]
         wikitext = get_wikitext(args.wiki_api, sample)
         print(f"=== '{sample}' 원본 위키텍스트 ===")
