@@ -1,5 +1,15 @@
 """Genshin Impact 전용: scrape_locations.py 출력(트랙별 리프 로케이션)을 받아 각
-로케이션 문서의 "Overview" 섹션 텍스트를 가져온다.
+로케이션 문서의 설명 텍스트를 가져온다.
+
+실제 구조(사용자가 보내준 실제 위치 문서 위키텍스트로 확인함 — "Mondstadt"): 이
+위키는 "Overview" 같은 별도 섹션 헤딩이 없고, 문서 최상단의
+{{Location Intro|...|description=<p>...</p>}} 템플릿의 description 파라미터에
+설명 텍스트가 들어있다. 예:
+    {{Location Intro|'''Mondstadt''', also known as ...<ref>...</ref>
+    |description=<p>Located in the west part of Starfell Valley ...
+    {{w|Curtain wall (fortification)|castle wall}}...</p>}}
+<ref>...</ref>(각주)와 {{w|Target|Display}}(위키백과 등 외부 위키 링크 템플릿,
+Display 텍스트만 씀) 처리가 필요하다.
 
 여러 트랙이 같은 로케이션을 공유하는 경우가 많아서, 로케이션당 한 번만 조회하고
 결과를 캐싱한다(이미 --out 파일에 있는 로케이션은 다시 안 가져옴 — 재실행해도
@@ -19,6 +29,8 @@ from pathlib import Path
 
 import requests
 
+from scrape_locations import _WIKILINK, find_template_call, parse_template_params
+
 USER_AGENT = "ost-biome-dataset-bot/0.1 (research/personal dataset project)"
 
 
@@ -37,27 +49,34 @@ def get_wikitext(wiki_api: str, title: str):
 
 
 _TEMPLATE = re.compile(r"\{\{[^{}]*\}\}")
-_WIKILINK = re.compile(r"\[\[(?:[^\|\]]*\|)?([^\]]+)\]\]")
-_HEADING = re.compile(r"\n==+\s*([^=\n]+?)\s*==+\n")
+_REF = re.compile(r"<ref[^>]*>.*?</ref>|<ref[^>]*/>", re.IGNORECASE | re.DOTALL)
+_W_TEMPLATE = re.compile(r"\{\{w\|([^|}]*)(?:\|([^}]*))?\}\}", re.IGNORECASE)
+_EXT_LINK = re.compile(r"\[https?://\S+\s+([^\]]+)\]|\[https?://\S+\]")
+_HTML_TAG = re.compile(r"</?p>|<br\s*/?>", re.IGNORECASE)
 
 
 def extract_overview(wikitext: str) -> str:
-    """"Overview" 섹션(레벨 무관) 본문을 다음 헤더 전까지 뽑아 평문화."""
-    text_with_nl = "\n" + wikitext
-    matches = list(_HEADING.finditer(text_with_nl))
-    for i, m in enumerate(matches):
-        if m.group(1).strip().lower() == "overview":
-            start = m.end()
-            end = matches[i + 1].start() if i + 1 < len(matches) else len(text_with_nl)
-            section = text_with_nl[start:end]
-            prev = None
-            while prev != section:
-                prev = section
-                section = _TEMPLATE.sub("", section)
-            section = _WIKILINK.sub(r"\1", section)
-            section = re.sub(r"'''?", "", section)
-            return section.strip()
-    return ""
+    """{{Location Intro}}의 description 파라미터에서 위치 설명 텍스트를 뽑아 평문화."""
+    call = find_template_call(wikitext, "Location Intro")
+    if not call:
+        return ""
+    params = parse_template_params(call)
+    desc = params.get("description", "").strip()
+    if not desc:
+        return ""
+    desc = _REF.sub("", desc)
+    # {{w|Target|Display}}는 외부 위키(위키백과 등) 링크 템플릿 — Display만 남김
+    # (없으면 Target). 아래 일반 템플릿 제거 루프보다 먼저 처리해야 함.
+    desc = _W_TEMPLATE.sub(lambda m: (m.group(2) or m.group(1)).strip(), desc)
+    prev = None
+    while prev != desc:
+        prev = desc
+        desc = _TEMPLATE.sub("", desc)
+    desc = _WIKILINK.sub(r"\1", desc)
+    desc = _EXT_LINK.sub(r"\1", desc)
+    desc = _HTML_TAG.sub(" ", desc)
+    desc = re.sub(r"'''?", "", desc)
+    return re.sub(r"\s+", " ", desc).strip()
 
 
 def main():
